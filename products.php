@@ -29,7 +29,7 @@
           <li class="button-small">Account</li>
           <li class="button-small">Basket</li>
           <li class="button-small">Reviews</li>
-          <li class="button-small">Logout</li>
+          <li><a class="button-small" href="php/logout.php">Log out</a></li>
         </ul>
       </div>
     </div>
