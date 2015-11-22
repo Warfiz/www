@@ -32,7 +32,7 @@
 
 	echo "Signup successful. Looks like meat is back on the menu, boys!\n";
 
-	header( "refresh:5;url= ../index.html" );
+	header( "refresh:5;url= ../index.php" );
 
 	mysqli_close( $conn );
 ?>

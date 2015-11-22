@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+
+<?php
+  session_start();
+  if(!isset($_SESSION['authenticated'])) {
+    header( "Location: http://localhost/index.php" );
+  };
+?>
+
 <html>
 
   <head>
@@ -15,17 +23,6 @@
 
   <body>
 
-
-
-
-    <?php
-      session_start();
-      if($_SESSION['authenticated'] != 'yes') {
-        header( "Location: http://localhost/index.html" );
-      };
-    ?>
-
-
     <div class="sidebar">
       <div class="navigation-links">
         <ul>
@@ -41,7 +38,7 @@
 
       <header>
         <div class="company-title">
-          <a href="index.html">
+          <a href="index.php">
             <h1>Meat<span>Market</span></h1>
             <h3>고기와 비스킷 초콜릿 의 흔적을 포함 할 수있다</h3>
           </a>
