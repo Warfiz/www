@@ -9,7 +9,7 @@
 
   include 'php/getUserAccountInfo.php';
 
-  
+
 
 ?>
 
@@ -35,6 +35,7 @@
       <div class="navigation-links">
         <ul>
           <li><a class="button-small"    href="account.php">Account</a></li>
+          <li><a class="button-small"    href="products.php">Products</a></li>
           <li><a class="button-small"    href="basket.php">Basket</a></li>
           <li><a class="button-small"    href="reviews.php">Reviews</a></li>
           <li><a class="button-small" href="php/logout.php">Log out</a></li>
@@ -53,14 +54,14 @@
         </div>
       </header>
 
-    
+
 
       <div class="row-3">
 
           <div class="col">
-            
+
               <div class="product-card">
-             
+
                 <div class="product-info">
 
                   <h3>Account Information</h3>
@@ -68,13 +69,13 @@
                       <ul>
 
 
-                        
+
 
 
 
 
                         <li> Username: <?php echo "$var_Uname";?>   </li>
-                        
+
                         <li> Email:    <?php echo "$var_Email";?>   </li>
                         <li> Name: <?php echo "$var_Fname";?> </li>
                         <li> Surname:  <?php echo "$var_Lname";?> </li>
@@ -85,7 +86,7 @@
 
                 </div>
               </div>
-            
+
           </div>
 
 

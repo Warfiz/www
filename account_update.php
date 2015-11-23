@@ -10,7 +10,7 @@
 
   include 'php/getUserAccountInfo.php';
 
-  
+
 
 ?>
 
@@ -36,6 +36,7 @@
       <div class="navigation-links">
         <ul>
           <li><a class="button-small"    href="account.php">Account</a></li>
+          <li><a class="button-small"    href="products.php">Products</a></li>
           <li><a class="button-small"    href="basket.php">Basket</a></li>
           <li><a class="button-small"    href="reviews.php">Reviews</a></li>
           <li><a class="button-small" href="php/logout.php">Log out</a></li>
@@ -54,18 +55,18 @@
         </div>
       </header>
 
-    
+
 
       <div class="row-3">
 
           <div class="col">
-            
+
 
               <div class="product-info">
 
               <h3>Change Account Info For <?php echo " $var_Uname " ?></h3>
               <div class="navigation-links" >
-            
+
 
               <ul>
 
@@ -75,7 +76,7 @@
               <li><input id="email"     type="text" name="Email" placeholder="meat@mail.com" > </li>
               <li><input id="firstName" type="text" name="Fname" placeholder="firstname" ></li>
               <li><input id="lastName"  type="text" name="Lname" placeholder="lastname" ></li>
-              
+
               <li><input id="password"    type="Password" name="Password" placeholder="new meatpass" ></li>
               <li><input id="conPassword" type="Password" name="conPassword" placeholder="Confirm meatpass"></li>
 
@@ -88,8 +89,8 @@
                   </div>
 
                 </div>
-              
-            
+
+
           </div>
 
 
