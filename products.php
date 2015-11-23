@@ -30,7 +30,7 @@
           <li><a class="button-small"    href="products.php">Products</a></li>
           <li><a class="button-small"    href="basket.php">Basket</a></li>
           <li><a class="button-small"    href="reviews.php">Reviews</a></li>
-          <li><a class="button-small" href="logout.php">Log out</a></li>
+          <li><a class="button-small" href="php/logout.php">Log out</a></li>
         </ul>
       </div>
     </div>
