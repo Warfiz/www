@@ -8,7 +8,6 @@
 <body>
 
 
-
 <?php
 	
 	$conn = mysqli_connect( 'localhost', 'web-client', 'web-client2k15', 'meatmarket' );  
@@ -17,53 +16,41 @@
 		die( 'Could not connect: ' . mysqli_connect_error() );
 	}
 
-	/*echo 'Connected successfully ';*/
-
-	
-	$var_Uname			= $_POST["Uname"];
-	$var_password	 	= $_POST["Password"];
+	//echo 'Connected successfully ';
 
 
-/*session_start();   //starting the session for user profile page*/
+
+	//session_start();   //starting the session for user profile page
 
 
-if(!empty($_POST['Uname']))   //checking the 'user' name which is from Sign-In.html, is it empty or have some text
-{
-	
-	$query = "SELECT *  FROM usertable WHERE Uname = '$var_Uname' AND Password = '$var_password'";
+	$var_Uname 			= $_SESSION['Uname'];
+
+	$query  = "SELECT *  FROM usertable WHERE Uname = '$var_Uname' ";
 
 
 	$retval = mysqli_query( $conn, $query );
-	
-	$row = 		mysqli_fetch_array($retval, MYSQLI_ASSOC);	
-	
-	if(!empty($row['Uname']) AND !empty($row['Password']))
-	{
-		
-		$_SESSION['Uname'] = $row['Uname'];
-		$_SESSION['authenticated'] = 'yes';
-	}
-	else
-	{
-		echo "SORRY... YOU ARE A FAILURE OF A HUMAN BEIN...";
-	}
-}
 
-	header( "Location: /products.php" );
-	#header( "refresh:1;url=../products.php" );
+	$row 	= mysqli_fetch_array($retval, MYSQLI_ASSOC);	
+
+
 	
-	mysqli_close( $conn ); 
-	
+	$var_Password	 	= $row["Password"];
+	$var_Fname 			= $row["Fname"];
+	$var_Lname 			= $row["Lname"];
+	$var_Email 			= $row["Email"];
+
 	
 
+
+
+
+
+
+mysqli_close( $conn ); 
 ?>
-
-
-
-
-
 
 
 </body>
 </head>
+
 

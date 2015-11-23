@@ -4,7 +4,8 @@
   session_start();
   if(!isset($_SESSION['authenticated'])) {
     header( "Location: http://localhost/index.php" );
-  };
+
+};
 
 
   include 'php/getUserAccountInfo.php';
@@ -59,32 +60,35 @@
 
           <div class="col">
             
-              <div class="product-card">
-             
-                <div class="product-info">
 
-                  <h3>Account Information</h3>
-                  <div class="navigation-links">
-                      <ul>
+              <div class="product-info">
 
+              <h3>Change Account Info For <?php echo " $var_Uname " ?></h3>
+              <div class="navigation-links" >
+            
 
-                        
+              <ul>
 
-
+              <form action="php/updateUserAccountInfo.php" method="post" onsubmit="return myFunction()">
 
 
-                        <li> Username: <?php echo "$var_Uname";?>   </li>
-                        
-                        <li> Email:    <?php echo "$var_Email";?>   </li>
-                        <li> Name: <?php echo "$var_Fname";?> </li>
-                        <li> Surname:  <?php echo "$var_Lname";?> </li>
-                        <li><a class="button-small"    href="account_update.php">Change Account Info</a></li>
-                        <li><a class="button-small"    href="php/logout.php">Your Reviews</a></li>
-                      </ul>
-                    </div>
+              <li><input id="email"     type="text" name="Email" placeholder="meat@mail.com" > </li>
+              <li><input id="firstName" type="text" name="Fname" placeholder="firstname" ></li>
+              <li><input id="lastName"  type="text" name="Lname" placeholder="lastname" ></li>
+              
+              <li><input id="password"    type="Password" name="Password" placeholder="new meatpass" ></li>
+              <li><input id="conPassword" type="Password" name="conPassword" placeholder="Confirm meatpass"></li>
+
+              <li><button type="submit" name="submit">Save changes</button></li>
+              </form>
+
+
+
+                    </ul>
+                  </div>
 
                 </div>
-              </div>
+              
             
           </div>
 
