@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+0<!DOCTYPE html>
 
 <?php
   session_start();
@@ -29,7 +29,7 @@
           <li><a class="button-small"    href="account.php">Account</a></li>
           <li><a class="button-small"    href="basket.php">Basket</a></li>
           <li><a class="button-small"    href="reviews.php">Reviews</a></li>
-          <li><a class="button-small" href="logout.php">Log out</a></li>
+          <li><a class="button-small"    href="php/logout.php">Log out</a></li>
         </ul>
       </div>
     </div>
