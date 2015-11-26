@@ -139,12 +139,6 @@ button:focus{
   background-color: #D95757;
 }
 
-.container{
-  width: 960px;
-  margin: 0 auto;
-}
-
-
 
 /************
 Components
@@ -197,44 +191,15 @@ Components
   color: #FFF;
 }
 
-.row-3{
-  margin: 50px auto;
-  text-align: center;
+.wrapper{
+  margin-left: 200px;
+  width: auto;
+  position: relative;
+  overflow: auto;
+  z-index: 1;
 }
 
-
-.col{
-  display: inline-block;
-  margin-right: 50px;
-}
-
-.col:last-child{
-  margin-right: 0;
-}
-
-@media (max-width: 1220px) {
-  .row-3{
-    display: block;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .col{
-    display: block;
-    margin-top: 40px;
-    margin-right: 0;
-    padding: 0 10px 0 10px;
-  }
-
-}
-
-@media (max-width: 400px) {
-  .row-3{
-    display: block;
-    width: 250px;
-    margin: 0 auto;
-  }
-}
+/*SIDEBAR*/
 
 .sidebar{
   position: fixed;
@@ -247,34 +212,70 @@ Components
   text-align: center;
 }
 
+
 .navigation-links{
   display: inline-block;
   text-align: left;
   margin-top: 20px;
+
 }
 
 .navigation-links ul li{
   margin-top: 10px;
+  padding: 7px;
 }
 
+.navigation-links a{
+  font-weight: 600;
+  font-size: 1em;
+  transition: all .2s ease;
+  color: #666;
+}
 
+.navigation-links a:hover{
+  color: #F06161;
+}
 
+@media (max-width: 800px) {
+  .sidebar{
+    position: relative;
+    display: block;
+    width: auto;
+  }
+  .navigation-links{
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  .wrapper{
+    margin-left: 0;
+  }
+}
 
-
-
-
-
-
-
-
-
-.wrapper{
-  margin-left: 200px;
-  width: auto;
+/*GRID SYSTEM*/
+.container{
   position: relative;
-  overflow: auto;
-  z-index: 1;
+	padding: 10px;
+}
 
+.container ul,
+.container li {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.cards{
+	position: relative;
+	text-align: center;
+}
+
+.cards > li {
+  display: inline-block;
+	vertical-align: top;
+	position: relative;
+	padding: 30px;
+	text-align: left;
 }
 
 
@@ -282,7 +283,7 @@ Components
 Home Page
 *************/
 .company-title{
-
+ margin-top: 20px;
 }
 
 header{
@@ -291,7 +292,7 @@ header{
 
 header h3{
   color: #FFF;
-  font-size: 1.8em;
+  font-size: 1.6em;
   font-weight: 300;
   margin-top: -20px;
 }
@@ -420,7 +421,7 @@ PRODUCT PAGE
 *************/
 
 .products{
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 @media (max-width: 400px) {
@@ -430,7 +431,7 @@ PRODUCT PAGE
 }
 
 .product-card{
-  max-width: 300px;
+  max-width: 350px;
   background-color: #FFF;
   border-radius: 5px;
   /*
@@ -441,9 +442,9 @@ PRODUCT PAGE
   border: 1px solid #CCC;
 }
 
-@media (max-width: 1220px){
+@media (max-width: 1330px){
   .product-card{
-    max-width: 600px;
+
   }
 }
 
