@@ -38,6 +38,8 @@
     <div class="wrapper">
 
 
+
+
      <a class="menu-button" onclick="expandMenu()"></a>
 
       <header>
@@ -54,6 +56,81 @@
         <div class="container">
           <div class="products">
             <ul class="cards">
+
+              <li>
+                <a href="#">
+                  <div class="product-card">
+                    <div class="product-img"></div>
+                    <div class="product-info">
+                      <h3>Kött</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                      <div class="button-small">More info</div>
+                      <span>In stock: 30</span>
+                      <button id="buy">Buy</button>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <div class="product-card">
+                    <div class="product-img"></div>
+                    <div class="product-info">
+                      <h3>Kött</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                      <div class="button-small">More info</div>
+                      <span>In stock: 30</span>
+                      <button id="buy">Buy</button>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <div class="product-card">
+                    <div class="product-img"></div>
+                    <div class="product-info">
+                      <h3>Kött</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                      <div class="button-small">More info</div>
+                      <span>In stock: 30</span>
+                      <button id="buy">Buy</button>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <div class="product-card">
+                    <div class="product-img"></div>
+                    <div class="product-info">
+                      <h3>Kött</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                      <div class="button-small">More info</div>
+                      <span>In stock: 30</span>
+                      <button id="buy">Buy</button>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <div class="product-card">
+                    <div class="product-img"></div>
+                    <div class="product-info">
+                      <h3>Kött</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                      <div class="button-small">More info</div>
+                      <span>In stock: 30</span>
+                      <button id="buy">Buy</button>
+                    </div>
+                  </div>
+                </a>
+              </li>
 
               <li>
                 <a href="#">
