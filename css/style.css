@@ -199,6 +199,28 @@ Components
   z-index: 1;
 }
 
+.wrapper .menu-button{
+  outline: none;
+  background: none;
+  border: none;
+  position: absolute;
+  background: url(../img/menu-button.svg);
+  left: 20px;
+  top: 20px;
+  width: 29px;
+  height: 22px;
+  background-size: 29px 22px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+}
+
+@media (max-width: 800px){
+  .wrapper .menu-button{
+    display: block;
+  }
+}
+
 /*SIDEBAR*/
 
 .sidebar{
@@ -241,6 +263,13 @@ Components
     position: relative;
     display: block;
     width: auto;
+    max-height: 0;
+    overflow: hidden;
+    t-webkit-transition: max-height .5s; /* Safari */
+    -webkit-transition-timing-function: ease; /* Safari */
+    transition: max-height .5s;
+    transition-timing-function: ease;
+    box-shadow: none;
   }
   .navigation-links{
     margin: 0;
@@ -250,6 +279,14 @@ Components
   .wrapper{
     margin-left: 0;
   }
+}
+
+.expanded{
+    t-webkit-transition: max-height .5s; /* Safari */
+    -webkit-transition-timing-function: ease; /* Safari */
+    transition: max-height .5s;
+    transition-timing-function: ease;
+    max-height: 500px;
 }
 
 /*GRID SYSTEM*/
@@ -302,17 +339,21 @@ header h1{
   font-size: 6em;
 }
 
-@media (max-width: 590px) {
+@media (max-width: 800px) {
+  .company-title{
+    margin-top: 60px;
+  }
   header h1{
     color: #FFF20E;
-    font-size: 4em;
+    font-size: 4.5em;
   }
   header h3{
-    font-size: 1em;
+    font-size: 1.2em;
+    margin-top: -15px;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 440px) {
   header h1{
     color: #FFF20E;
     font-size: 3em;

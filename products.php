@@ -37,6 +37,9 @@
 
     <div class="wrapper">
 
+
+     <a class="menu-button" onclick="expandMenu()"></a>
+
       <header>
         <div class="company-title">
           <a href="index.php">
@@ -120,5 +123,7 @@
 
     </div>
 
+
+    <script type="text/javascript" src="js/min_nav.js"></script>
   </body>
 </html>
