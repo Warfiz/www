@@ -315,6 +315,11 @@ Components
 	text-align: left;
 }
 
+@media (max-width: 800px) {
+  .cards > li{
+    padding: 15px;
+  }
+}
 
 /************
 Home Page
