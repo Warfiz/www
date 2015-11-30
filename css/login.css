@@ -1,0 +1,35 @@
+/************
+LOGIN PAGE
+*************/
+.sign-in{
+  text-align: center;
+  height: 500px;
+}
+
+.sign-in .card-form{
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+.sign-in input{
+  display: block;
+  margin-top: 15px;
+}
+
+.sign-in button{
+  margin-top: 20px;
+}
+
+.sign-in .button-big{
+  margin: 40px 0 10px 0;
+}
+
+.sign-in #forgot-pass{
+  color: #333;
+  font-size: 0.85em;
+  transition: all ease 0.1s;
+}
+
+#forgot-pass:hover{
+  color: #FFF;
+}

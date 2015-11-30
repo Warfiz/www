@@ -18,6 +18,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" charset="utf-8">
+    <link rel="stylesheet" href="css/login.css" charset="utf-8">
 
   </head>
 

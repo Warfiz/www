@@ -1,0 +1,23 @@
+/************
+SIGN UP PAGE
+*************/
+.sign-up{
+  text-align: center;
+  height: 1000px;
+}
+
+.sign-up .card-form input{
+  margin: 3px 0 10px 0;
+}
+
+.sign-up button{
+  margin-top: 20px;
+}
+
+.sign-up .button-big{
+  margin-top: 40px;
+}
+
+.sign-up input{
+  display: block;
+}

@@ -1,0 +1,83 @@
+/************
+PRODUCT PAGE
+*************/
+.products{
+  margin-top: 50px;
+}
+
+@media (max-width: 400px) {
+  .products{
+    margin-top: 0;
+  }
+}
+
+.product-card{
+  max-width: 350px;
+  background-color: #FFF;
+  border-radius: 5px;
+  transition: all 0.1s ease;
+  border: 1px solid #CCC;
+}
+
+@media (max-width: 1330px){
+  .product-card{
+
+  }
+}
+
+.product-card:hover{
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(105,105,105,0.5);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(105,105,105,0.5);
+  box-shadow: 0px 0px 0px 0px rgba(105,105,105,0.5);
+  transform: scale(1.02);
+}
+
+.product-card .product-info{
+  text-align: left;
+  padding: 10px;
+}
+
+.product-card .product-img{
+  background-color: #CCC;
+  width: auto;
+  height: 150px;
+  background-image: url("../img/placeholder-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: block;
+}
+
+.product-card p{
+  overflow: hidden;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+  height: 60px;
+}
+
+.product-card .button-small{
+  display: inline-block;
+  background-color: #F06161;
+  color: #FFF;
+}
+
+.product-card .button-small:hover{
+  display: inline-block;
+  background-color: #D95757;
+}
+
+.product-card span{
+  float: right;
+  margin-right: 5px;
+}
+
+.product-card #buy{
+  margin-top: 5px;
+  width: 100%;
+  background-color: #53AF59;
+  border: solid 2px #53AF59;
+}
+
+.product-card #buy:hover{
+  background-color: #3F9645 ;
+}
