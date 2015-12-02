@@ -23,7 +23,7 @@
             <p>'.$description.'</p>
             <div class="button-small">More info</div>
             <span>In stock: '.$quantity.'</span>
-            <button id="buy">Buy</button>
+            <button href="#" id="buy">Buy</button>
           </div>
         </div>
       </a>
