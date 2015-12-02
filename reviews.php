@@ -26,11 +26,12 @@
     <div class="sidebar">
       <div class="navigation-links">
         <ul>
-          <li><a class="button-small"    href="account.php">Account</a></li>
-          <li><a class="button-small"    href="products.php">Products</a></li>
-          <li><a class="button-small"    href="basket.php">Basket</a></li>
-          <li><a class="button-small"    href="reviews.php">Reviews</a></li>
-          <li><a class="button-small"    href="php/logout.php">Log out</a></li>
+          <li><a href="account.php">Account</a></li>
+          <li><a href="products.php">Products</a></li>
+          <li><a href="basket.php">Basket</a></li>
+          <li><a href="reviews.php">Reviews</a></li>
+          <li><a href="addproducts.php">Add Products</a></li>
+          <li><a href="php/logout.php">Log out</a></li>
         </ul>
       </div>
     </div>

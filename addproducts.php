@@ -3,9 +3,8 @@
 <?php
   session_start();
   if(!isset($_SESSION['authenticated'])) {
-    header( "Location: http://localhost/index.php" );
+    header( "Location: index.php" );
   };
-  include 'inc/getUserAccountInfo.php';
 ?>
 
 <html>
@@ -19,6 +18,8 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" charset="utf-8">
+    <link rel="stylesheet" href="css/addproducts.css" charset="utf-8">
+
 
   </head>
 
@@ -32,15 +33,14 @@
           <li><a href="basket.php">Basket</a></li>
           <li><a href="reviews.php">Reviews</a></li>
           <li><a href="addproducts.php">Add Products</a></li>
+
           <li><a href="php/logout.php">Log out</a></li>
         </ul>
       </div>
     </div>
 
     <div class="wrapper">
-
-
-       <a class="menu-button" onclick="expandMenu()"></a>
+     <a class="menu-button" onclick="expandMenu()"></a>
 
       <header>
         <div class="company-title">
@@ -51,31 +51,21 @@
         </div>
       </header>
 
-      <div class="container">
-        <ul class="cards" style="padding: 20px;">
-          <li>
-            <div class="product-card" >
-              <div class="product-info">
-                <h3>Account Information</h3>
-                <div class="navigation-links">
-                  <ul>
-                    <li> Username: <?php echo "$var_Uname";?>   </li>
-                    <li> Email:    <?php echo "$var_Email";?>   </li>
-                    <li> Name: <?php echo "$var_Fname";?> </li>
-                    <li> Surname:  <?php echo "$var_Lname";?> </li>
-                    <li><a class="button-small"    href="account_update.php">Change Account Info</a></li>
-                    <li><a class="button-small"    href="php/logout.php">Your Reviews</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
 
+    <div class="add-products">
+      <div class="card-form">
+        <form action="php/addproducts.php" method="post">
+          <input type="text" name="Meatname"    placeholder="Meatname" required>
+          <input type="text" name="Price"       placeholder="Price" required>
+          <textarea type="textarea" name="Description" rows="5"></textarea>
+          <input type="text" name="Quantity" placeholder="Quantity">
+          
+          <button type="clear" name="reset">Clear</button>
+          <button type="submit" name="Addproduct">Add Product</button>
+        </form>
+      </div>
     </div>
 
-
+    </div>
   </body>
-
 </html>
