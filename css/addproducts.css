@@ -1,0 +1,19 @@
+.add-products{
+  text-align: center;
+}
+
+.add-products .card-form input{
+  margin: 3px 0 10px 0;
+}
+
+.add-products button{
+  margin-top: 20px;
+}
+
+.add-products .button-big{
+  margin-top: 40px;
+}
+
+.add-products input{
+  display: block;
+}
