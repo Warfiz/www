@@ -2,7 +2,7 @@
 
   include '/inc/connect.php';
 
-  $query  = "SELECT * FROM producttable";
+  $query  = "SELECT * FROM producttable;";
   $result = mysqli_query( $conn, $query );
 
   while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {

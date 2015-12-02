@@ -5,7 +5,7 @@
     header( "Location: index.php" );
   };
 
-  include 'inc/getProductInfo';
+  include 'inc/getProductInfo.php';
 ?>
 
 <html>
