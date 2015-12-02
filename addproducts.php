@@ -57,7 +57,7 @@
         <form action="php/addproducts.php" method="post">
           <input type="text"         name="Meatname"    placeholder="Meatname" required>
           <input type="text"         name="Price"       placeholder="Price" required>
-          <textarea type="textarea"  name="Description" rows="5"></textarea>
+          <textarea name="Description" rows="5"></textarea>
           <input type="text"         name="Quantity"    placeholder="Quantity">
           <button type="clear" name="reset">Clear</button>
           <button type="submit" name="Addproduct">Add Product</button>

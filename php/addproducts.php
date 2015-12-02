@@ -5,16 +5,16 @@
   $meatName			= $_POST["Meatname"];
 	$price	    	= $_POST["Price"];
   $description	= $_POST["Description"];
-  $imgPath			= $_POST["Imgpath"];
+/*  $imgPath			= $_POST["Imgpath"];*/
   $quantity	 	  = $_POST["Quantity"];
 
 
 
   $query =
-  '
-  INSERT INTO usertable (Meatname, Price, Description, Imgpath, Quantity)
-  VALUES ("'.$meatName.'", "'.$price.'", "'.$Description.'", "", "'.$quantity.'");
-  ';
+  "
+  INSERT INTO producttable (Meatname, Price, Description, Imgpath, Quantity)
+  VALUES ('$meatName', '$price', '$description', 'null', '$quantity');
+  ";
 
   $retval = mysqli_query( $conn, $query );
 
