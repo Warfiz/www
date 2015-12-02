@@ -1,5 +1,5 @@
 ErrorDocument 404 /filenotfound.php
-ErrorDocument 403 /index.php
+ErrorDocument 403 /filenotfound.php
 
 
 IndexIgnore *
