@@ -32,7 +32,6 @@
           <li><a href="basket.php">Basket</a></li>
           <li><a href="reviews.php">Reviews</a></li>
           <li><a href="addproducts.php">Add Products</a></li>
-
           <li><a href="php/logout.php">Log out</a></li>
         </ul>
       </div>

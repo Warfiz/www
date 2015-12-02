@@ -55,11 +55,10 @@
     <div class="add-products">
       <div class="card-form">
         <form action="php/addproducts.php" method="post">
-          <input type="text" name="Meatname"    placeholder="Meatname" required>
-          <input type="text" name="Price"       placeholder="Price" required>
-          <textarea type="textarea" name="Description" rows="5"></textarea>
-          <input type="text" name="Quantity" placeholder="Quantity">
-          
+          <input type="text"         name="Meatname"    placeholder="Meatname" required>
+          <input type="text"         name="Price"       placeholder="Price" required>
+          <textarea type="textarea"  name="Description" rows="5"></textarea>
+          <input type="text"         name="Quantity"    placeholder="Quantity">
           <button type="clear" name="reset">Clear</button>
           <button type="submit" name="Addproduct">Add Product</button>
         </form>
