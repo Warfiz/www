@@ -15,18 +15,16 @@
     $quantity		   	= $row["Quantity"];
 
     echo '<li>
-      <a href="productinfo.php?pid='.$productID.'">
-        <div class="product-card">
-          <div class="product-img"></div>
-          <div class="product-info">
-            <h3>'.$meatname.'</h3>
-            <p>'.$description.'</p>
-            <div class="button-small">More info</div>
-            <span>In stock: '.$quantity.'</span>
-            <button href="#" id="buy">Buy</button>
-          </div>
+      <div class="product-card">
+        <div class="product-img"></div>
+        <div class="product-info">
+          <h3>'.$meatname.'</h3>
+          <p>'.$description.'</p>
+          <a class="button-small" href="productinfo.php?pid='.$productID.'">More info</a>
+          <span>In stock: '.$quantity.'</span>
+          <button id="buy">Buy</button>
         </div>
-      </a>
+      </div>
     </li>';
   }
 
