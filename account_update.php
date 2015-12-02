@@ -6,7 +6,7 @@
     header( "Location: http://localhost/index.php" );
   };
 
-  include 'php/getUserAccountInfo.php';
+  include 'inc/getUserAccountInfo.php';
 
 ?>
 

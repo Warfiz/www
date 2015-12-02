@@ -1,6 +1,6 @@
 <?php
 
-	include '../inc/connect.php';
+	include '/inc/connect.php';
 
 	$var_Uname 			= $_SESSION['Uname'];
 

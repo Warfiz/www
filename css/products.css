@@ -35,6 +35,7 @@ PRODUCT PAGE
 .product-card .product-info{
   text-align: left;
   padding: 10px;
+  width: 300px;
 }
 
 .product-card .product-img{

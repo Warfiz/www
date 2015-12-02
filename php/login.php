@@ -42,12 +42,3 @@ if(!empty($_POST['Uname']))   //checking the 'user' name which is from Sign-In.h
 
 
 ?>
-
-
-
-
-
-
-
-</body>
-</head>
