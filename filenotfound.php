@@ -17,8 +17,7 @@
 
   <body style="text-align:center;">
 
-    <h1 style="color:#FFF; margin-top: 100px;">404 - File not found</h1>
-    <h3 style="color:#FFF;">U suck :D</h3>
+    <h1 style="color:#FFF; margin-top: 100px;">404 - File Not Found</h1>
 
   </body>
 </html>
