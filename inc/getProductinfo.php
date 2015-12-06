@@ -9,7 +9,11 @@
 
   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-  $meatname	 	    = $row["Meatname"];
+  if (!$row) {
+    header( "Location: ../filenotfound.php" );
+  }
+
+  $meatName	 	    = $row["Meatname"];
   $price 			    = $row["Price"];
   $description 		= $row["Description"];
   $imgPath		  	= $row["Imgpath"];

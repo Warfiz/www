@@ -39,9 +39,6 @@
 
     <div class="wrapper">
 
-
-
-
      <a class="menu-button" onclick="expandMenu()"></a>
 
       <header>
@@ -64,8 +61,6 @@
             </ul>
           </div>
         </div>
-
-
 
     </div>
 

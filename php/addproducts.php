@@ -22,7 +22,8 @@
 		die( mysqli_error( $conn ) . 'Could not enter data: ' );
 	}
 
-  header( "refresh:1;url= ../addproducts.php" );
+	header( "Location: ../addproducts.php" );
+	
   mysqli_close( $conn );
 
 ?>
