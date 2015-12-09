@@ -1,0 +1,22 @@
+.checkout{
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.checkout .checkoutcard{
+  max-width: 700px;
+  background-color: #FFF;
+  padding: 15px;
+  margin-bottom: 5px;
+  height: auto;
+  border-style: solid;
+}
+
+.checkout .checkoutcard h4{
+  font-size: 2em;
+  font-weight: 400;
+  text-decoration: underline;
+  text-align: center;
+}
