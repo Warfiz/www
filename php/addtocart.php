@@ -22,15 +22,30 @@
   echo 'ID: '.$productID.'<br>';
   echo 'Email: '.$email.'<br>';
 
-  $query =
-  "
-  INSERT INTO baskettable (producttable_ID, quantity, usertable_Email)
-  VALUES ('$productID', '$quantity', '$email');
-  ";
 
-  $retval = mysqli_query( $conn, $query );
+  /*Check if product exists in basket table*/
+  $query  = "SELECT ID FROM baskettable WHERE producttable_ID = '$productID' AND usertable_Email = '$email'";
+  $result = mysqli_query( $conn, $query );
+  $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-	if( !$retval ) {
+  $basketID = $row['ID'];
+
+  /*If product exists add to quantity, else add product to basket*/
+  if ($row) {
+      $query = "UPDATE baskettable SET quantity=quantity + '$quantity' WHERE ID = '$basketID'";
+      $result = mysqli_query( $conn, $query );
+  } else {
+    /*Insert product into basket table*/
+    $query =
+    "
+    INSERT INTO baskettable (producttable_ID, quantity, usertable_Email)
+    VALUES ('$productID', '$quantity', '$email');
+    ";
+    $result = mysqli_query( $conn, $query );
+  }
+
+  /*Error handling*/
+	if( !$result ) {
 		die( mysqli_error( $conn ) . 'Could not enter data: ' );
 	}
 
