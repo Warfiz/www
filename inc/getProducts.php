@@ -22,7 +22,11 @@
           <p>'.$description.'</p>
           <a class="button-small" href="productinfo.php?pid='.$productID.'">More info</a>
           <span>In stock: '.$quantity.'</span>
-          <button id="buy">Buy</button>
+          <form action="/php/addtocart.php?pid='.$productID.'" method="post">
+            Quantity: <input type="number" name="quantity" value="">
+            <button type="submit" id="buy">Add to cart</button>
+          </form>
+
         </div>
       </div>
     </li>';

@@ -15,6 +15,9 @@
   }
 
   /*Look if there is a discount on the price*/
+
+
+
   $price 			    = $row["Price"];
   $discount       = $row["Discount"];
 

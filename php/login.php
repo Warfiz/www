@@ -26,6 +26,7 @@ if(!empty($_POST['Uname']))   //checking the 'user' name which is from Sign-In.h
 	{
 
 		$_SESSION['Uname'] = $row['Uname'];
+		$_SESSION['Email'] = $row['Email'];
 		$_SESSION['authenticated'] = 'yes';
 	}
 	else

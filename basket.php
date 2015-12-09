@@ -55,12 +55,14 @@
           <h4>Lammkött</h4>
           <div class="quantity">
             <a href="#">+</a>
-
+            <span>10</span>
             <a href="#">-</a>
           </div>
           <div class="price">213kr</div>
           <a href="#">❌</a>
         </div>
+
+
 
       </section>
 

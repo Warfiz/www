@@ -37,6 +37,15 @@ PRODUCT PAGE
   padding: 10px;
 }
 
+.product-card .product-info form input{
+  border: 1px solid #AAA;
+  box-shadow: none;
+  width: 50px;
+  height: 25px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
 .product-card .product-img{
   background-color: #CCC;
   width: auto;
