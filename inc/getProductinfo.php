@@ -9,12 +9,24 @@
 
   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
+  /*If user inserts a url var that doesnt exist*/
   if (!$row) {
     header( "Location: ../filenotfound.php" );
   }
 
-  $meatName	 	    = $row["Meatname"];
+  /*Look if there is a discount on the price*/
   $price 			    = $row["Price"];
+  $discount       = $row["Discount"];
+
+  if ($discount == 0) {
+    $finalPrice = (float)$price;
+  } else {
+    $finalPrice = (1-$discount)*$price;
+  }
+
+
+
+  $meatName	 	    = $row["Meatname"];
   $description 		= $row["Description"];
   $imgPath		  	= $row["Imgpath"];
   $quantity		   	= $row["Quantity"];

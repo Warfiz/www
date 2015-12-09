@@ -1,0 +1,49 @@
+.basket{
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.basket .item{
+  max-width: 600px;
+  background-color: #FFF;
+  padding: 15px;
+  margin-bottom: 5px;
+}
+
+.basket .item div{
+  display: inline-block;
+}
+
+.basket .item h4{
+  font-size: 2em;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.basket .item .quantity{
+
+}
+
+.basket .item .quantity a{
+  font-size: 2em;
+  margin: 0;
+}
+
+.basket .item a{
+  font-size: 1.7em;
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+  transition: all .1s ease;
+}
+
+.basket .item a:hover{
+  color: #F06161;
+}
+
+.basket .item .price{
+  font-size: 1.6em;
+
+}

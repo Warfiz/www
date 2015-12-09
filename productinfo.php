@@ -49,7 +49,7 @@
         <div class="info">
           <h3><?=$meatName?></h3>
           <p><?=$description?></p>
-          <div class="price"><?=$price?>kr</div>
+          <div class="price"><?=$finalPrice?>kr</div>
           <div class="quantity">Quantity: <?=$quantity?></div>
           <a href="#" class="button-big">Add to cart</a>
         </div>

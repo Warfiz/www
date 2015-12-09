@@ -18,7 +18,8 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" charset="utf-8">
-
+    <link rel="stylesheet" href="css/basket.css" charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -37,7 +38,7 @@
     </div>
 
     <div class="wrapper">
-
+      <a class="menu-button" onclick="expandMenu()"></a>
       <header>
         <div class="company-title">
           <a href="index.php">
@@ -47,111 +48,26 @@
         </div>
       </header>
 
-      <div class="products">
+      <section class="basket">
 
-        <div class="row-3">
+        <div class="item">
+          <h4>Lammkött</h4>
+          <div class="quantity">
+            <a href="#">+</a>
 
-          <div class="col">
-            <a href="#">
-              <div class="product-card">
-                <div class="product-img"></div>
-                <div class="product-info">
-                  <h3>Kött</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                  <div class="button-small">More info</div>
-                  <span>In stock: 30</span>
-                  <button id="buy">Buy</button>
-                </div>
-              </div>
-            </a>
+            <a href="#">-</a>
           </div>
-
-
-          <div class="col">
-            <a href="#">
-              <div class="product-card">
-                <div class="product-img"></div>
-                <div class="product-info">
-                  <h3>Kött</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                  <div class="button-small">More info</div>
-                  <span>In stock: 30</span>
-                  <button id="buy" >Buy</button>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col">
-            <a href="#">
-              <div class="product-card">
-                <div class="product-img"></div>
-                <div class="product-info">
-                  <h3>Kött</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                  <div class="button-small">More info</div>
-                  <span>In stock: 30</span>
-                  <button id="buy" >Buy</button>
-                </div>
-              </div>
-            </a>
-          </div>
-
+          <div class="price">213kr</div>
+          <a href="#">❌</a>
         </div>
 
-
-        <div class="row-3">
-
-            <div class="col">
-              <a href="#">
-                <div class="product-card">
-                  <div class="product-img"></div>
-                  <div class="product-info">
-                    <h3>Kött</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                    <div class="button-small">More info</div>
-                    <span>In stock: 30</span>
-                    <button id="buy">Buy</button>
-                  </div>
-                </div>
-              </a>
-            </div>
+      </section>
 
 
-            <div class="col">
-              <a href="#">
-                <div class="product-card">
-                  <div class="product-img"></div>
-                  <div class="product-info">
-                    <h3>Kött</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                    <div class="button-small">More info</div>
-                    <span>In stock: 30</span>
-                    <button id="buy" >Buy</button>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col">
-              <a href="#">
-                <div class="product-card">
-                  <div class="product-img"></div>
-                  <div class="product-info">
-                    <h3>Kött</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                    <div class="button-small">More info</div>
-                    <span>In stock: 30</span>
-                    <button id="buy" >Buy</button>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-        </div>
-
-      </div>
     </div>
 
+
+    <script type="text/javascript" src="js/min_nav.js"></script>
   </body>
+
 </html>
