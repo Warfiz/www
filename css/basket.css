@@ -1,30 +1,44 @@
 .basket{
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 20px;
+  font-size: 1.2em;
+  padding-bottom: 200px;
 }
 
 .basket .item{
-  max-width: 600px;
   background-color: #FFF;
-  padding: 15px;
-  border-style: solid;
   margin-bottom: 5px;
+  height: 200px;
+  position: relative;
 }
 
-.basket .item div{
+.basket .item .product-info{
+  overflow: hidden;
+  padding: 10px 30px;
+}
+
+.basket .item #remove-item{
+  position: absolute;
+  right: 5px;
+  top: 0;
+}
+
+.basket .item img {
   display: inline-block;
+  height: 100%;
+  float: left;
 }
 
-.basket .item h4{
+.basket .item h3{
   font-size: 2em;
   font-weight: 400;
-  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .basket .item .quantity{
-
+  margin-right: 20px;
 }
 
 .basket .item .quantity a{
@@ -34,7 +48,6 @@
 
 .basket .item a{
   font-size: 1.7em;
-  float: right;
   margin-top: 5px;
   margin-right: 5px;
   transition: all .1s ease;
@@ -44,7 +57,38 @@
   color: #F06161;
 }
 
-.basket .item .price{
-  font-size: 1.6em;
 
+.basket .item input{
+  border: 1px solid #AAA;
+  width: 30px;
+  padding: 0 3px;
+  box-shadow: none;
+  text-align: center;
+}
+
+.basket .basket-summary{
+  max-width: 800px;
+  background-color: #FFF;
+  position: relative;
+}
+
+.basket .basket-summary h4{
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #333;
+  padding: 20px;
+  text-align: right;
+  background-color: #DDD;
+}
+
+.basket .button-big{
+  color: #FFF;
+  background-color: #7BCD71;
+  border: 2px solid #7BCD71;
+  margin: 0;
+}
+
+.basket .checkout{
+  max-width: 800px;
+  float: right;
 }

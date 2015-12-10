@@ -294,6 +294,14 @@ COMPONENTS
   text-align: center;
 }
 
+.sidebar .in-basket{
+  margin-left: 20px;
+  color: #FFF;
+  font-weight: 400;
+  background-color: #F06161;
+  padding: 0 15px;
+  border-radius: 5px;
+}
 
 .navigation-links{
   display: inline-block;

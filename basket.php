@@ -56,6 +56,24 @@
           include 'inc/getUserBasket.php';
         ?>
 
+        <?php if(!$basketIsEmpty){
+          echo '<div class="basket-summary">
+                  <h4>Total Price: '.$totalPrice.'kr</h4>
+                </div>';
+        } ?>
+
+        <?php if(!$basketIsEmpty){
+          echo '<div class="checkout">
+                  <form action="#" method="post">
+                    <button class="button-big" type="submit" name="button">Checkout</button>
+                  </form>
+                </div>';
+        } ?>
+
+        <?php if($basketIsEmpty){
+          echo '<h1 style="text-align: center; color: #FFF; margin-bottom: 40px;">Cart is empty</h1>';
+        } ?>
+
 
       </section>
 

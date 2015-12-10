@@ -18,32 +18,42 @@
 
   $result = mysqli_query( $conn, $query );
 
+  /*Keeps track of total price*/
+  $totalPrice = 0;
+
+  /*Check if basket is empty*/
+  $basketIsEmpty = true;
+
   while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
-    $productID      = $row["ID"];
-    $meatname	 	    = $row["Meatname"];
-    $price 			    = $row["Price"];
-    $description 		= $row["Description"];
-    $imgPath		  	= $row["Imgpath"];
-    $quantity		   	= $row["quantity"];
+    $productID         = $row["ID"];
+    $meatname	 	       = $row["Meatname"];
+    $price 			       = $row["Price"];
+    $description 	  	 = $row["Description"];
+    $imgPath		    	 = $row["Imgpath"];
+    $quantity		     	 = $row["quantity"];
 
-    echo '<li>
+    $basketIsEmpty = false;
 
+    $totalProductPrice = $price*$quantity;
+    $totalPrice += $price*$quantity;
+
+    echo '
     <div class="item">
-        <h4>'.$meatname.'</h4>
-        <div class="quantity">
-          <a href="#">+</a>
-          <span>'.$quantity.'</span>
-          <a href="#">-</a>
+        <img src="img/placeholder-image.png" alt="" />
+        <div class="product-info">
+          <h3>'.$meatname.'</h3>
+          <div class="price">Price: '.$price.'kr</div>
+          <div class="quantity">
+            Quantity: <input type="text" name="name" value="'.$quantity.'">
+          </div>
+          <hr>
+          <div class="total-product-price">Total: '.$totalProductPrice.'kr</div>
         </div>
-        <div class="price">'.$price.'kr</div>
-        <a href="/php/removeproduct.php?pid='.$productID.'">❌</a>
+
+        <a id="remove-item" href="/php/removeproduct.php?pid='.$productID.'">❌</a>
     </div>
-
-
-
-    </li>';
-
+      ';
 
   }
 
