@@ -25,5 +25,5 @@
 	header( "refresh:5;url= ../account.php" );
 
 	mysqli_close( $conn );
-  
+
 ?>
