@@ -2,10 +2,6 @@
 
   include '/inc/connect.php';
 
-  /*$query  = "SELECT * FROM baskettable;";
-  "SELECT * FROM baskettable;"
-  "SELECT * FROM producttable;"*/
-
   $email = 	$_SESSION['Email'];
 
 
@@ -45,7 +41,7 @@
           <h3>'.$meatname.'</h3>
           <div class="price">Price: '.$price.'kr</div>
           <div class="quantity">
-            Quantity: <input type="text" name="name" value="'.$quantity.'">
+            Quantity: <input id="'.$productID.'" data-id="'.$productID.'" class="quan" type="text" name="name" value="'.$quantity.'">
           </div>
           <hr>
           <div class="total-product-price">Total: '.$totalProductPrice.'kr</div>

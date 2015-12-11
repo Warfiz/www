@@ -81,7 +81,9 @@
     </div>
 
 
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="js/min_nav.js"></script>
+    <script src="js/updateQuantity.js" charset="utf-8"></script>
   </body>
 
 </html>
