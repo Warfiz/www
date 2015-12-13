@@ -28,9 +28,13 @@
         <ul>
           <li><a href="account.php">Account</a></li>
           <li><a href="products.php">Products</a></li>
-          <li><a href="basket.php">Basket</a></li>
+          <li><a href="basket.php">Basket</a><span class="in-basket"><?=$productCounter?></span></li>
           <li><a href="reviews.php">Reviews</a></li>
-          <li><a href="addproducts.php">Add Products</a></li>
+          <?php
+          if(isset($_SESSION['Admin'])){
+            echo '<li><a href="addproducts.php">Add Products</a></li>';
+          }
+          ?>
           <li><a href="php/logout.php">Log out</a></li>
         </ul>
       </div>

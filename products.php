@@ -33,12 +33,10 @@
           <li><a href="basket.php">Basket</a><span class="in-basket"><?=$productCounter?></span></li>
           <li><a href="reviews.php">Reviews</a></li>
           <?php
-          session_start();
           if(isset($_SESSION['Admin'])){
-            echo "<li><a href="addproducts.php">Add Products</a></li>";
+            echo '<li><a href="addproducts.php">Add Products</a></li>';
           }
           ?>
-          <li><a href="addproducts.php">Add Products</a></li>
           <li><a href="php/logout.php">Log out</a></li>
         </ul>
       </div>

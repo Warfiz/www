@@ -19,21 +19,23 @@ if(!empty($_POST['Uname']))   //checking the 'user' name which is from Sign-In.h
 
 	$retval = mysqli_query( $conn, $query );
 	$row = 		mysqli_fetch_array($retval, MYSQLI_ASSOC);
-	$admin = $_row['Admin'];
+	$admin = $row['Admin'];
+
+	echo $admin;
 
 	if(!empty($row['Uname']) AND !empty($row['Password']))
 	{
-		if(admin == 1)
+		if($admin == 1)
 		{
-			$_SESSION['Admin'] = '1';
+			$_SESSION['Admin'] = 1;
 		}
-		if(admin == 2)
+		if($admin == 2)
 		{
-			$_SESSION['superAdmin'] = '2';
+			$_SESSION['superAdmin'] = 1;
 		}
-		if(admin == 3)
+		if($admin == 3)
 		{
-			$_SESSION['superHeroAdmin'] = '3';
+			$_SESSION['superHeroAdmin'] = 1;
 		}
 		$_SESSION['Uname'] = $row['Uname'];
 		$_SESSION['Email'] = $row['Email'];

@@ -32,7 +32,11 @@
           <li><a href="products.php">Products</a></li>
           <li><a href="basket.php">Basket</a><span class="in-basket"><?=$productCounter?></span></li>
           <li><a href="reviews.php">Reviews</a></li>
-          <li><a href="addproducts.php">Add Products</a></li>
+          <?php
+          if(isset($_SESSION['Admin'])){
+            echo '<li><a href="addproducts.php">Add Products</a></li>';
+          }
+          ?>
           <li><a href="php/logout.php">Log out</a></li>
         </ul>
       </div>
@@ -72,11 +76,9 @@
         } ?>
 
 
-        <div class="modal">
-          <div class="window">
-            <p>Click here to [<a href='#' onclick='overlay()'>close</a>]</p>
-          </div>
-        </div>
+        <section class="checkout-form">
+
+        </section>
 
       </section>
 
