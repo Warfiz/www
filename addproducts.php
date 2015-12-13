@@ -2,9 +2,14 @@
 
 <?php
   session_start();
-  if(!isset($_SESSION['authenticated'])) {
+  if(!isset($_SESSION['authenticated'] ))
+  {
     header( "Location: index.php" );
   };
+  if(!isset($_SESSION['Admin']))
+  {
+    header( "Location: products.php" );
+  }
 ?>
 
 <html>
@@ -33,7 +38,6 @@
           <li><a href="basket.php">Basket</a></li>
           <li><a href="reviews.php">Reviews</a></li>
           <li><a href="addproducts.php">Add Products</a></li>
-
           <li><a href="php/logout.php">Log out</a></li>
         </ul>
       </div>

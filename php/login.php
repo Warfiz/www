@@ -17,14 +17,24 @@ if(!empty($_POST['Uname']))   //checking the 'user' name which is from Sign-In.h
 
 	$query = "SELECT *  FROM usertable WHERE Uname = '$var_Uname' AND Password = '$var_password'";
 
-
 	$retval = mysqli_query( $conn, $query );
-
 	$row = 		mysqli_fetch_array($retval, MYSQLI_ASSOC);
+	$admin = $_row['Admin'];
 
 	if(!empty($row['Uname']) AND !empty($row['Password']))
 	{
-
+		if(admin == 1)
+		{
+			$_SESSION['Admin'] = '1';
+		}
+		if(admin == 2)
+		{
+			$_SESSION['superAdmin'] = '2';
+		}
+		if(admin == 3)
+		{
+			$_SESSION['superHeroAdmin'] = '3';
+		}
 		$_SESSION['Uname'] = $row['Uname'];
 		$_SESSION['Email'] = $row['Email'];
 		$_SESSION['authenticated'] = 'yes';
