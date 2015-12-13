@@ -42,6 +42,9 @@ body {
   background-color: #F06161;
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  height:100%;
+  margin:0;
+  padding:0;
 }
 
 article,

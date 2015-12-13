@@ -20,7 +20,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" charset="utf-8">
     <link rel="stylesheet" href="css/basket.css" charset="utf-8">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
   </head>
 
   <body>
@@ -33,7 +33,6 @@
           <li><a href="basket.php">Basket</a><span class="in-basket"><?=$productCounter?></span></li>
           <li><a href="reviews.php">Reviews</a></li>
           <li><a href="addproducts.php">Add Products</a></li>
-          <li><a href="checkout.php">Temp checkout here</a></li>
           <li><a href="php/logout.php">Log out</a></li>
         </ul>
       </div>
@@ -64,9 +63,7 @@
 
         <?php if(!$basketIsEmpty){
           echo '<div class="checkout">
-                  <form action="#" method="post">
-                    <button class="button-big" type="submit" name="button">Checkout</button>
-                  </form>
+                  <button  id="modal-button" class="button-big">Checkout</button>
                 </div>';
         } ?>
 
@@ -75,8 +72,13 @@
         } ?>
 
 
-      </section>
+        <div class="modal">
+          <div class="window">
+            <p>Click here to [<a href='#' onclick='overlay()'>close</a>]</p>
+          </div>
+        </div>
 
+      </section>
 
     </div>
 
@@ -84,6 +86,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="js/min_nav.js"></script>
     <script src="js/updateQuantity.js" charset="utf-8"></script>
+    <script src="js/modal.js" charset="utf-8"></script>
   </body>
 
 </html>
