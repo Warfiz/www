@@ -2,10 +2,12 @@
 
 <?php
   session_start();
+  /*If user in NOT logged in*/
   if(!isset($_SESSION['authenticated'] ))
   {
     header( "Location: index.php" );
   };
+  /*If user is NOT an Admin*/
   if(!isset($_SESSION['Admin']))
   {
     header( "Location: products.php" );

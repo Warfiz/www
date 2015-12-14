@@ -5,6 +5,7 @@
   if(!isset($_SESSION['authenticated'])) {
     header( "Location: http://localhost/index.php" );
   };
+
   include 'inc/basketCount.php';
 ?>
 
@@ -67,7 +68,7 @@
 
         <?php if(!$basketIsEmpty){
           echo '<div class="checkout">
-                  <button  id="modal-button" class="button-big">Checkout</button>
+                  <button  id="show-checkout-button" class="button-big">Checkout</button>
                 </div>';
         } ?>
 
@@ -75,12 +76,58 @@
           echo '<h1 style="text-align: center; color: #FFF; margin-bottom: 40px;">Cart is empty</h1>';
         } ?>
 
-
-        <section class="checkout-form">
-
-        </section>
-
       </section>
+
+      <section class="checkout-form">
+
+        <h2>Checkout</h2>
+          <form class="checkout-form" action="#" method="post">
+
+
+
+            Use account information<input id="use-info" type="checkbox" name="use-info">
+
+
+            <div class="stored-info">
+              <label for="fName">Name</label>
+              <input id="fName" type="text" name="name" value="" required>
+
+              <label for="lName">Last name</label>
+              <input id="lName" type="text" name="lastName" value="" required>
+
+
+              <label for="address">Address</label>
+              <input id="address" type="text" name="address" value="" required>
+
+              <label for="city">City</label>
+              <input id="city" type="text" name="city" value="" required>
+
+              <label for="phoneNumber">Phone number</label>
+              <input id="phoneNumber" type="text" name="phoneNumber" value="" required>
+            </div>
+
+            <h3>Billing information</h3>
+            <label for="card-number">Card number</label>
+            <input id="card-number" type="text" name="card-number" value="" required>
+
+            <label for="cvc">CVC</label>
+            <input id="cvc" type="text" name="cvc" value="" required>
+
+            <label for="card-date">Card </label>
+            <input id="card-date" type="text" name="card-date" value="" required>
+
+            <a href="">Terms and service</a>
+
+            <input id="accept-condition" type="checkbox" name="accept-condition" value=""> I agree
+
+            <button id="confirm" type="submit" name="submit" disabled>Confirm</button>
+            <button id="cancel" href="">Cancel</button>
+
+
+          </form>
+      </section>
+
+
 
     </div>
 
@@ -88,7 +135,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="js/min_nav.js"></script>
     <script src="js/updateQuantity.js" charset="utf-8"></script>
-    <script src="js/modal.js" charset="utf-8"></script>
+    <script src="js/show-checkout.js" charset="utf-8"></script>
   </body>
 
 </html>
