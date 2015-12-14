@@ -1,12 +1,15 @@
 <?php
 
-  session_start();
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+  }
 
   if(!isset($_SESSION['authenticated'])) {
     header( "Location: http://localhost/index.php" );
   };
 
   include 'inc/getUserAccountInfo.php';
+  include 'inc/basketCount.php';
 
 ?>
 
@@ -21,6 +24,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" charset="utf-8">
+    <link rel="stylesheet" href="css\account-uppdate.css" charset="utf-8">
 
   </head>
 
@@ -28,71 +32,57 @@
 
 
 
-    <div class="sidebar">
-      <div class="navigation-links">
-        <ul>
-          <li><a href="account.php">Account</a></li>
-          <li><a href="products.php">Products</a></li>
-          <li><a href="basket.php">Basket</a><span class="in-basket"><?=$productCounter?></span></li>
-          <li><a href="reviews.php">Reviews</a></li>
-          <?php
-          if(isset($_SESSION['Admin'])){
-            echo '<li><a href="addproducts.php">Add Products</a></li>';
-          }
-          ?>
-          <li><a href="php/logout.php">Log out</a></li>
-        </ul>
-      </div>
+  <div class="sidebar">
+    <div class="navigation-links">
+      <ul>
+        <li><a href="account.php">Account</a></li>
+        <li><a href="products.php">Products</a></li>
+        <li><a href="basket.php">Basket</a><span class="in-basket"><?=$productCounter?></span></li>
+        <li><a href="reviews.php">Reviews</a></li>
+        <?php
+        if(isset($_SESSION['Admin'])){
+          echo '<li><a href="addproducts.php">Add Products</a></li>';
+        }
+        ?>
+        <li><a href="php/logout.php">Log out</a></li>
+      </ul>
     </div>
+  </div>
 
-    <div class="wrapper">
+  <div class="wrapper">
 
-      <header>
-        <div class="company-title">
-          <a href="index.php">
-            <h1>Meat<span>Market</span></h1>
-            <h3>고기와 비스킷 초콜릿 의 흔적을 포함 할 수있다</h3>
-          </a>
-        </div>
-      </header>
+    <header>
+      <div class="company-title">
+        <a href="index.php">
+          <h1>Meat<span>Market</span></h1>
+          <h3>고기와 비스킷 초콜릿 의 흔적을 포함 할 수있다</h3>
+        </a>
+      </div>
+    </header>
 
-
-
-      <div class="row-3">
-
-          <div class="col">
-
-
-              <div class="product-info">
-
-              <h3>Change Account Info For <?php echo " $var_Uname " ?></h3>
-              <div class="navigation-links" >
+    <section class="account-uppdate">
+      <h3>Change Account Info For <?php echo " $var_Uname " ?></h3>
+      <div class="card-form">
+        <form action="php/updateUserAccountInfo.php" method="post" onsubmit="return myFunction()">
 
 
-              <ul>
+        <input id="email"     type="text" name="Email" placeholder="meat@mail.com" >
+        <input id="password"    type="Password" name="Password" placeholder="new meatpass" >
+        <input id="conPassword" type="Password" name="conPassword" placeholder="Confirm meatpass">
+        <input id="firstName" type="text" name="Fname" placeholder="firstname" >
+        <input id="lastName"  type="text" name="Lname" placeholder="lastname" >
+        <input id="address" type="text" name="address" placeholder="Address">
+        <input id="City" type="text" name="City" placeholder="City">
+        <input id="phoneNumber" type="text" name="phoneNumber" placeholder="Phone number">
 
-              <form action="php/updateUserAccountInfo.php" method="post" onsubmit="return myFunction()">
-
-
-              <li><input id="email"     type="text" name="Email" placeholder="meat@mail.com" > </li>
-              <li><input id="firstName" type="text" name="Fname" placeholder="firstname" ></li>
-              <li><input id="lastName"  type="text" name="Lname" placeholder="lastname" ></li>
-
-              <li><input id="password"    type="Password" name="Password" placeholder="new meatpass" ></li>
-              <li><input id="conPassword" type="Password" name="conPassword" placeholder="Confirm meatpass"></li>
-
-              <li><button type="submit" name="submit">Save changes</button></li>
-              </form>
+        <button type="submit" name="submit">Save changes</button>
+        </form>
+      </div>
+    </section>
 
 
 
-                    </ul>
-                  </div>
-
-                </div>
-
-
-          </div>
+  </div>
 
 
 

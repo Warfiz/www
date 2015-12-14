@@ -2,7 +2,7 @@
 
   session_start();
 
-  include '/inc/connect.php';
+  include '../inc/connect.php';
 
 
 	$var_Uname 			= $_SESSION['Uname'];
@@ -22,7 +22,7 @@
 
 	echo "Account info updated!\n";
 
-	header( "refresh:5;url= ../account.php" );
+	header( "Location: /account.php" );
 
 	mysqli_close( $conn );
 

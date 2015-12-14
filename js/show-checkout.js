@@ -29,7 +29,7 @@ $(document).ready(function() {
 
       $.ajax({
          type: "POST",
-         url: "../inc/getUserAccountInfo.php",
+         url: "../inc/ajaxGetUserInfo.php",
          dataType: "json",
          success: function(data){
 
@@ -52,6 +52,7 @@ $(document).ready(function() {
     if(!this.checked){
       $('.stored-info').find('input').each(function (index) {
           console.log($(this).val(""));
+          enableInput($(this));
       })
 
     }

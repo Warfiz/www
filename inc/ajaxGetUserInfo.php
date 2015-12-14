@@ -23,5 +23,8 @@
 	$var_PhoneNumber	= $row["PhoneNumber"];
 
 
+	$arr = array('fName'=>$var_Fname, 'lName'=>$var_Lname, 'email'=>$var_Email, 'address'=>$var_Address, 'city'=>$var_City, 'phoneNumber'=>$var_PhoneNumber);
+	echo json_encode($arr);
+
 
 ?>
