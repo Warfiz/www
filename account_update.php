@@ -71,9 +71,9 @@
         <input id="conPassword" type="Password" name="conPassword" placeholder="Confirm meatpass">
         <input id="firstName" type="text" name="Fname" placeholder="firstname" >
         <input id="lastName"  type="text" name="Lname" placeholder="lastname" >
-        <input id="address" type="text" name="address" placeholder="Address">
-        <input id="City" type="text" name="City" placeholder="City">
-        <input id="phoneNumber" type="text" name="phoneNumber" placeholder="Phone number">
+        <input id="address" type="text" name="Address" placeholder="Address">
+        <input id="city" type="text" name="City" placeholder="City">
+        <input id="phoneNumber" type="text" name="PhoneNumber" placeholder="Phone number">
 
         <button type="submit" name="submit">Save changes</button>
         </form>

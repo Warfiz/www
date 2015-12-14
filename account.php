@@ -68,6 +68,9 @@
                     <li> Email:    <?php echo "$var_Email";?>   </li>
                     <li> Name: <?php echo "$var_Fname";?> </li>
                     <li> Surname:  <?php echo "$var_Lname";?> </li>
+                    <li> Address: <?=$var_Address?></li>
+                    <li> City: <?=$var_City?></li>
+                    <li> Phone numbers: <?=$var_PhoneNumber?></li>
                     <li><a class="button-small"    href="account_update.php">Change Account Info</a></li>
                     <li><a class="button-small"    href="php/logout.php">Your Reviews</a></li>
                   </ul>
