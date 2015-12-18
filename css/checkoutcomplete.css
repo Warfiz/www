@@ -1,0 +1,23 @@
+.order-complete{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.order-complete .button-big{
+  margin-top: 50px;
+  background-color: #FFF20E;
+  font-weight: 700;
+  font-size: 2em;
+  max-width: 500px;
+}
+
+.order-complete .button-big:hover{
+  color: red;
+  background-color: #FFF20E;
+}
+
+.order-complete .button-big.receipt{
+  margin-top: 100px;
+  max-width: 200px;
+  font-size: 1.5em;
+}

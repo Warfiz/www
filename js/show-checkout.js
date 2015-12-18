@@ -62,14 +62,14 @@ $(document).ready(function() {
   function disableInput(selector, data) {
     console.log(selector + " : " + data);
     selector.val(data);
-    selector.prop('disabled', true);
+    selector.prop('readonly', true);
     selector.css('color', '#AAA');
   }
 
   function enableInput(selector) {
     selector.val("");
     selector.css('color', '#444');
-    selector.prop('disabled', false);
+    selector.prop('readonly', false);
   }
 
 

@@ -81,7 +81,7 @@
       <section class="checkout-form">
 
         <h2>Checkout</h2>
-          <form class="checkout-form" action="#" method="post">
+          <form class="checkout-form" action="checkoutcomplete.php" method="post">
 
 
 
@@ -108,13 +108,13 @@
 
             <h3>Billing information</h3>
             <label for="card-number">Card number</label>
-            <input id="card-number" type="text" name="card-number" value="" required>
+            <input id="card-number" type="text" name="cardNumber" value="" required>
 
             <label for="cvc">CVC</label>
             <input id="cvc" type="text" name="cvc" value="" required>
 
             <label for="card-date">Card </label>
-            <input id="card-date" type="text" name="card-date" value="" required>
+            <input id="card-date" type="text" name="cardDate" value="" required>
 
             <a href="">Terms and service</a>
 

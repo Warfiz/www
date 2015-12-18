@@ -3,9 +3,8 @@
 <?php
   session_start();
   if(!isset($_SESSION['authenticated'])) {
-    header( "Location: http://localhost/index.php" );
+    header( "Location: index.php" );
   };
-  include 'inc/getUserAccountInfo.php';
   include 'inc/basketCount.php';
 ?>
 
@@ -20,6 +19,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" charset="utf-8">
+    <link rel="stylesheet" href="css/products.css" charset="utf-8">
 
   </head>
 
@@ -44,8 +44,7 @@
 
     <div class="wrapper">
 
-
-       <a class="menu-button" onclick="expandMenu()"></a>
+     <a class="menu-button" onclick="expandMenu()"></a>
 
       <header>
         <div class="company-title">
@@ -56,35 +55,11 @@
         </div>
       </header>
 
-      <div class="container">
-        <ul class="cards" style="padding: 20px;">
-          <li>
-            <div class="product-card" >
-              <div class="product-info">
-                <h3>Account Information</h3>
-                <div class="navigation-links">
-                  <ul>
-                    <li> Username: <?php echo "$var_Uname";?>   </li>
-                    <li> Email:    <?php echo "$var_Email";?>   </li>
-                    <li> Name: <?php echo "$var_Fname";?> </li>
-                    <li> Surname:  <?php echo "$var_Lname";?> </li>
-                    <li> Address: <?=$var_Address?></li>
-                    <li> City: <?=$var_City?></li>
-                    <li> Phone numbers: <?=$var_PhoneNumber?></li>
-                    <li><a class="button-small"    href="account_update.php">Change Account Info</a></li>
-                    <li><a class="button-small"    href="php/logout.php">Your Reviews</a></li>
-                    <li><a class="button-small"    href="userOrders.php">Your Orders</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
+      
 
     </div>
 
 
+    <script type="text/javascript" src="js/min_nav.js"></script>
   </body>
-
 </html>
