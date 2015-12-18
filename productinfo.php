@@ -61,8 +61,27 @@
 
       </div>
 
-    </div>
+      <section class="reviews">
 
+      <div class="review">
+      </div>
+
+      <div class="writereview">
+        <h2>Write and rate your review here: </h2>
+        <div class="rating">
+          <div class="rating-item"></div>
+          <div class="rating-item"></div>
+          <div class="rating-item"></div>
+          <div class="rating-item"></div>
+          <div class="rating-item"></div>
+        </div>
+        <textarea></textarea>
+        <button type="submit" name="submit">Submit review</button>
+      </div>
+
+      </section>
+
+    </div>
 
     <script type="text/javascript" src="js/min_nav.js"></script>
 

@@ -42,10 +42,60 @@
 .info-product .button-big:hover{
   background-color: #7BCD71;
   color: #FFF;
-
 }
 
 .info-product .quantity{
   text-align: right;
   margin: 10px 0;
+}
+
+.reviews {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  height: 600px;
+  padding: 20px;
+}
+
+.reviews .review{
+  width: auto;
+  height: 100px;
+  background-color: #FFF;
+}
+
+.reviews .writereview{
+  margin-top: 10px;
+  width: auto;
+  padding: 20px;
+  background-color: #FFF;
+}
+
+.reviews .writereview h2{
+  margin-bottom: 5px;
+  font-size: 2em;
+
+}
+.reviews .writereview button{
+  margin-top: 5px;
+  color: #FFF;
+  background-color: #7BCD71;
+  border: #FFF;
+
+}
+.reviews .writereview textarea{
+  box-shadow: none;
+  width: 490px;
+  height: 70px;
+}
+
+.reviews .rating{
+  margin-bottom: 10px;
+}
+
+.reviews .rating-item{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #00FF00;
+  margin-right: 5px;
 }
