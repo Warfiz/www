@@ -6,58 +6,58 @@
   font-size: 1.2em;
 }
 
-.basket .item{
+.item{
   background-color: #FFF;
   margin-bottom: 5px;
   height: 200px;
   position: relative;
 }
 
-.basket .item .product-info{
+.item .product-info{
   overflow: hidden;
   padding: 10px 30px;
 }
 
-.basket .item #remove-item{
+.item #remove-item{
   position: absolute;
   right: 5px;
   top: 0;
 }
 
-.basket .item img {
+.item img {
   display: inline-block;
   height: 100%;
   float: left;
 }
 
-.basket .item h3{
+.item h3{
   font-size: 2em;
   font-weight: 400;
   margin-bottom: 10px;
 }
 
-.basket .item .quantity{
+.item .quantity{
   margin-right: 20px;
 }
 
-.basket .item .quantity a{
+.item .quantity a{
   font-size: 2em;
   margin: 0;
 }
 
-.basket .item a{
+.item a{
   font-size: 1.7em;
   margin-top: 5px;
   margin-right: 5px;
   transition: all .1s ease;
 }
 
-.basket .item a:hover{
+.item a:hover{
   color: #F06161;
 }
 
 
-.basket .item input{
+.item input{
   border: 1px solid #AAA;
   width: 30px;
   padding: 0 3px;

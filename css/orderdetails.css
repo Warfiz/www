@@ -1,0 +1,49 @@
+.order-details{
+  padding: 20px;
+}
+
+.receipt{
+  max-width: 1000px;
+  background-color: #FFF;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 10px 20px;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+}
+
+.receipt h1{
+  color: #666;
+}
+
+.receipt h3{
+  color: #666;
+  margin: -5px 0 50px 5px;
+  font-weight: 400;
+}
+
+.receipt hr{
+  margin-top: 40px;
+  background-color: #666;
+}
+
+.receipt h2{
+  color: #666;
+}
+
+.receipt .item{
+  width: auto;
+}
+
+.receipt .item:nth-child(odd) {
+  background-color: #F1F1F1;
+}
+
+.receipt .item ul li{
+  display: inline-block;
+  padding: 10px;
+  width: 200px;
+}

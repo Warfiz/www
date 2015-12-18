@@ -10,11 +10,23 @@
   include '/inc/connect.php';
 
   $email = 	$_SESSION['Email'];
+  $orderID = $_GET['od'];
 
-  $query= "SELECT  * FROM produktorders WHERE usertable_Email = '$email' group by orderID ";
+  $query= "SELECT produktorders.Quantity , produktorders.OrderID, producttable.Meatname, producttable.Price
+  FROM produktorders
+  INNER JOIN producttable
+  ON produktorders.producttable_ID=producttable.ID
+  WHERE produktorders.usertable_Email = '$email' AND OrderID = '$orderID'";
 
 
   $result = mysqli_query( $conn, $query );
+
+
+
+  /*Keeps track of total price*/
+  $totalPrice = 0;
+
+
 
 
 ?>
@@ -30,8 +42,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" charset="utf-8">
-    <link rel="stylesheet" href="css/basket.css" charset="utf-8">
-    <link rel="stylesheet" href="css/userOrders.css" charset="utf-8">
+    <link rel="stylesheet" href="css/orderdetails.css" charset="utf-8">
 
   </head>
 
@@ -67,32 +78,40 @@
         </div>
       </header>
 
-      <section class="orders">
+      <section class="order-details">
+        <div class="receipt">
+          <h1>Receipt</h1>
+          <h3>Order - <?=$orderID?></h3>
+          <?php
+            while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
-      <?php
-        while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+              $meatname	 	       = $row["Meatname"];
+              $price 			       = $row["Price"];
+              $quantity		     	 = $row["Quantity"];
 
-          $OrderID = $row['OrderID'];
-          $sent    = $row['Sent'];
 
-          $sent = ($sent == 0 ? "Pending" : "Sent");
 
-          echo '
-            <div class="item">
-              <div class="info">
-                <h3>Order: '.$OrderID.'</h3>
-                Status: '.$sent.'
+              $totalProductPrice = $price*$quantity;
+              $totalPrice += $price*$quantity;
+
+              echo '
+              <div class="item">
+                <ul>
+                  <li><b>'.$meatname.'</b></li>
+                  <li>Price: '.$price.'Kr</li>
+                  <li>Quantity: '.$quantity.'</li>
+                  <li>Subtotal: '.$totalProductPrice.'kr</li>
+                </ul>
               </div>
-              <div class="buttons">
-                <a class="button-big" href="orderdetails.php?od='.$OrderID.'">Details</a>
-                <a class="button-big cancel" href="#">Cancel order</a>
-              </div>
-            </div>
-          ';
+              ';
 
-        }
-      ?>
+            }
 
+          ?>
+        <hr>
+        <h2>Total: <?=$totalPrice?>kr</h2>
+
+        </div>
       </section>
 
     </div>

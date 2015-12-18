@@ -120,7 +120,7 @@ SKRIV UT KVITTO PÅ KÖPET
       <section class="order-complete">
         <h1>Thank you for your purchase  ;)</h1>
 
-        <a class="button-big receipt" href="#">Your receipt</a>
+        <a class="button-big receipt" href="orderdetails.php?od=<?=$orderID?>">Your receipt</a>
 
         <a class="button-big" href="products.php">Keep Shopping</a>
       </section>

@@ -1,0 +1,44 @@
+.orders{
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 1.2em;
+}
+
+.orders .item{
+  height: auto;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.orders .item .info{
+  float: left;
+}
+
+.orders .button-big{
+  float: none;
+  width: 100px;
+  font-size: 0.8em;
+  background-color: #7BCD71;
+  border: 1px solid #7BCD71;
+  color: #FFF;
+}
+
+.orders .button-big:hover{
+  color: #FFF;
+  background-color: #6DB764;
+}
+
+.orders .button-big.cancel{
+  float: none;
+  background-color: #FFF;
+  border: 2px solid #F06161;
+  color: #F06161;
+}
+
+.orders .button-big.cancel:hover{
+  border: 2px solid #F06161;
+  background-color: #F06161;
+  color: #FFF;
+}
