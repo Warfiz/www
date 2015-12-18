@@ -7,6 +7,12 @@
 
   include 'inc/getProductInfo.php';
   include 'inc/basketCount.php';
+  include 'inc/connect.php';
+
+  $query = "SELECT * FROM reviewtable WHERE Rating = '1' AND producttable_ID = '$productID'";
+  $result = mysqli_query($conn, $query);
+  $ratingCount = mysqli_num_rows($result);
+
 ?>
 
 <html>
@@ -52,6 +58,7 @@
         <img src="/img/placeholder-image.png" alt="">
 
         <div class="info">
+          <a id="rating" data-id=<?=$productID?> class="rating">+<?=$ratingCount?></a>
           <h3><?=$meatName?></h3>
           <p><?=$description?></p>
           <div class="price"><?=$finalPrice?>kr</div>
@@ -63,27 +70,21 @@
 
       <section class="reviews">
 
-      <div class="review">
-      </div>
+        <div class="review"></div>
 
-      <div class="writereview">
-        <h2>Write and rate your review here: </h2>
-        <div class="rating">
-          <div class="rating-item"></div>
-          <div class="rating-item"></div>
-          <div class="rating-item"></div>
-          <div class="rating-item"></div>
-          <div class="rating-item"></div>
+        <div class="writereview">
+          <h2>Leave a comment on product</h2>
+          <textarea></textarea>
+          <button type="submit" name="submit">Submit review</button>
         </div>
-        <textarea></textarea>
-        <button type="submit" name="submit">Submit review</button>
-      </div>
 
       </section>
 
     </div>
 
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="js/min_nav.js"></script>
+    <script src="js/rating.js" charset="utf-8"></script>
 
   </body>
 </html>

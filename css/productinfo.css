@@ -24,6 +24,7 @@
   max-width: 500px;
 }
 
+
 .info-product .price{
   color: black;
   font-weight: 400;
@@ -49,6 +50,28 @@
   margin: 10px 0;
 }
 
+.info-product .rating{
+  color: #FFF;
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-size: 1.2em;
+  font-weight: 400;
+  background-color: #F06161;
+  float: right;
+  margin:0 10px 0 0;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+.info-product .rating:hover{
+  transform: scale(1.1);
+}
+
+
+
+/***************
+REVIEWS
+****************/
 .reviews {
   display: block;
   margin: 0 auto;
@@ -74,6 +97,7 @@
   margin-bottom: 5px;
   font-size: 2em;
 
+
 }
 .reviews .writereview button{
   margin-top: 5px;
@@ -84,7 +108,10 @@
 }
 .reviews .writereview textarea{
   box-shadow: none;
-  width: 490px;
+  width:100%;
+  box-sizing: border-box;         /* For IE and modern versions of Chrome */
+  -moz-box-sizing: border-box;    /* For Firefox                          */
+  -webkit-box-sizing: border-box; /* For Safari                           */
   height: 70px;
 }
 
