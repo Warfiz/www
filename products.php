@@ -8,6 +8,8 @@
     header( "Location: index.php" );
   };
   include 'inc/basketCount.php';
+
+
 ?>
 
 <html>

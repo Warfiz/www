@@ -122,6 +122,7 @@ text-align: left;
   height: 120px;
   font-size: 1.1em;
   font-weight: 300;
+  background-color: #FFF;
 }
 
 #submitComment{
@@ -133,6 +134,11 @@ text-align: left;
   color: #F06161;
   margin-left: 20px;
   font-weight: 700;
+}
+
+#deleteComment{
+  background-color: #F06161;
+  display: none;
 }
 
 .reviews .comments{

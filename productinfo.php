@@ -9,10 +9,13 @@
   include 'inc/basketCount.php';
   include 'inc/connect.php';
 
+  $email = $_SESSION['Email'];
+
   //Get raitings
-  $query = "SELECT * FROM reviewtable WHERE Rating = '1' AND producttable_ID = '$productID'";
+  $query = "SELECT Rating FROM reviewtable WHERE producttable_ID = '$productID' AND usertable_Email = '$email'";
   $result = mysqli_query($conn, $query);
-  $ratingCount = mysqli_num_rows($result);
+  $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+  $ratingCount = $row['Rating'];
 
   //Get comments
   $query = "SELECT usertable.Uname, reviewtable.Comment
@@ -67,8 +70,9 @@
         <img src="/img/placeholder-image.png" alt="">
 
         <div class="info">
-          <a id="rating" data-id=<?=$productID?> class="rating">+<?=$ratingCount?></a>
           <h3><?=$meatName?></h3>
+          <a id="rating" data-id=<?=$productID?> class="rating">+<?=$ratingCount?></a>
+          <h2>Your Meatscore</h2>
           <p><?=$description?></p>
           <div class="price"><?=$finalPrice?>kr</div>
           <div class="quantity">Quantity: <?=$quantity?></div>
@@ -84,12 +88,14 @@
             while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
               $comment = $row['Comment'];
               $user    = $row['Uname'];
-              echo '
-                <div class="comment">
-                  <h3>'.$user.'</h3>
-                  <p>'.$comment.'</p>
-                </div>
-              ';
+              if ($comment != NULL) {
+                echo '
+                  <div class="comment">
+                    <h3>'.$user.'</h3>
+                    <p>'.$comment.'</p>
+                  </div>
+                ';
+              }
             }
           ?>
         </div>
@@ -99,6 +105,7 @@
           <textarea id="comment"></textarea>
           <button id="submitComment" data-id=<?=$productID?> >Submit review</button>
           <div id="error-message"></div>
+          <button id="deleteComment" data-id=<?=$productID?> >Delete comment</button>
         </div>
 
       </section>

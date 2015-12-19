@@ -35,6 +35,7 @@ elseif($existingComment == null) {
   $result = mysqli_query($conn, $query);
 } else {
  $commentError = 1;
+ $com = $existingComment;
 }
 
 //select username

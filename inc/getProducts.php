@@ -5,6 +5,7 @@
   $query  = "SELECT * FROM producttable;";
   $result = mysqli_query( $conn, $query );
 
+
   while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
     $productID      = $row["ID"];
@@ -13,6 +14,7 @@
     $description 		= $row["Description"];
     $imgPath		  	= $row["Imgpath"];
     $quantity		   	= $row["Quantity"];
+    $meatscore		 	= $row["Meatscore"];
 
     echo '<li>
       <div class="product-card">
@@ -20,6 +22,7 @@
         <div class="product-info">
           <h3>'.$meatname.'</h3>
           <p>'.$description.'</p>
+          <h3>Meatscore: '.$meatscore.'</h3>
           <a class="button-small" href="productinfo.php?pid='.$productID.'">More info</a>
           <span>In stock: '.$quantity.'</span>
           <form action="/php/addtocart.php?pid='.$productID.'" method="post">

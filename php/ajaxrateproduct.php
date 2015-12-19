@@ -26,23 +26,44 @@
     VALUES ('1', '$email', '$productID')";
     $result = mysqli_query($conn, $query);
   }
-  elseif ($rating == 0) {
+  elseif ($rating == 5) {
     $query = "UPDATE reviewtable
-    SET Rating = '1'
+    SET Rating = '0'
     WHERE usertable_Email = '$email' AND producttable_ID = '$productID'";
     $result = mysqli_query($conn, $query);
   } else {
     $query = "UPDATE reviewtable
-    SET Rating = 'NULL'
+    SET Rating = Rating + 1
     WHERE usertable_Email = '$email' AND producttable_ID = '$productID'";
     $result = mysqli_query($conn, $query);
   }
 
-  //Count ratings and return JSON
-  $query = "SELECT * FROM reviewtable WHERE Rating = '1' AND producttable_ID = '$productID'";
+  //get users rating
+  $query = "SELECT Rating FROM reviewtable WHERE producttable_ID = '$productID' AND usertable_Email = '$email'";
   $result = mysqli_query($conn, $query);
-  $ratingCount = mysqli_num_rows($result);
-  $arr = array('ratingCount'=>$ratingCount);
+  $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+  $ratingCount = $row['Rating'];
+
+  //calculate meatscore
+  $query = "SELECT Rating FROM reviewtable WHERE producttable_ID = '$productID'";
+  $result = mysqli_query($conn, $query);
+  $numOfRows = mysqli_num_rows($result);
+  $totRating = 0;
+  while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+    (float)$rating = $row['Rating'];
+    $totRating = $totRating + $rating;
+  }
+  $meatScore = round($totRating/$numOfRows, 1);
+
+  //update meatscore
+  $query = "UPDATE producttable
+  SET Meatscore = '$meatScore'
+  WHERE ID = '$productID'";
+  $result = mysqli_query($conn, $query);
+
+
+
+  $arr = array('ratingCount'=>$ratingCount, 'meatScore'=>$meatScore);
   echo json_encode($arr);
 
 

@@ -11,6 +11,7 @@ $(document).ready(function () {
        dataType: "json",
        success: function(data){
 
+        console.log(data);
         var count = data.ratingCount;
         $('#rating').html('+'+count);
 

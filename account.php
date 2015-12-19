@@ -72,7 +72,6 @@
                     <li> City: <?=$var_City?></li>
                     <li> Phone numbers: <?=$var_PhoneNumber?></li>
                     <li><a class="button-small"    href="account_update.php">Change Account Info</a></li>
-                    <li><a class="button-small"    href="php/logout.php">Your Reviews</a></li>
                     <li><a class="button-small"    href="userOrders.php">Your Orders</a></li>
                   </ul>
                 </div>

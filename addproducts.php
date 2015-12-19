@@ -12,6 +12,8 @@
   {
     header( "Location: products.php" );
   }
+
+  include 'inc/basketCount.php';
 ?>
 
 <html>
