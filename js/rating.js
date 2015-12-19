@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $('#rating').click(function () {
+  $('#rating').click(function (e) {
 
     var productID = $(this).data('id');
 
@@ -21,4 +21,5 @@ $(document).ready(function () {
       }
     });
   });
+
 });

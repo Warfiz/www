@@ -2,7 +2,7 @@
   margin-top: 50px;
   max-width: 800px;
   margin: 0 auto;
-  padding: 50px 20px 20px 20px;
+  padding: 50px 20px 10px 20px;
 }
 
 .info-product img{
@@ -78,6 +78,13 @@ REVIEWS
   max-width: 800px;
   height: 600px;
   padding: 20px;
+  padding-top: 0;
+}
+
+.reviews h2{
+  color: #333;
+  text-align: center;
+  margin: 10px 0 5px 0;
 }
 
 .reviews .review{
@@ -96,7 +103,7 @@ REVIEWS
 .reviews .writereview h2{
   margin-bottom: 5px;
   font-size: 2em;
-
+text-align: left;
 
 }
 .reviews .writereview button{
@@ -112,17 +119,37 @@ REVIEWS
   box-sizing: border-box;         /* For IE and modern versions of Chrome */
   -moz-box-sizing: border-box;    /* For Firefox                          */
   -webkit-box-sizing: border-box; /* For Safari                           */
-  height: 70px;
+  height: 120px;
+  font-size: 1.1em;
+  font-weight: 300;
 }
 
-.reviews .rating{
-  margin-bottom: 10px;
-}
-
-.reviews .rating-item{
+#submitComment{
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: #00FF00;
-  margin-right: 5px;
+}
+
+#error-message{
+  display: inline-block;
+  color: #F06161;
+  margin-left: 20px;
+  font-weight: 700;
+}
+
+.reviews .comments{
+  width: auto;
+}
+
+.reviews .comments .comment{
+  background-color: #FFF;
+  padding: 20px;
+}
+
+.reviews .comments .comment p{
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+
+.reviews .comments .comment h3{
+  color: #666;
 }

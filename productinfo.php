@@ -9,9 +9,18 @@
   include 'inc/basketCount.php';
   include 'inc/connect.php';
 
+  //Get raitings
   $query = "SELECT * FROM reviewtable WHERE Rating = '1' AND producttable_ID = '$productID'";
   $result = mysqli_query($conn, $query);
   $ratingCount = mysqli_num_rows($result);
+
+  //Get comments
+  $query = "SELECT usertable.Uname, reviewtable.Comment
+  FROM usertable
+  INNER JOIN reviewtable
+  ON usertable.Email=reviewtable.usertable_Email
+  WHERE reviewtable.producttable_ID = '$productID'";
+  $result = mysqli_query($conn, $query);
 
 ?>
 
@@ -69,13 +78,27 @@
       </div>
 
       <section class="reviews">
-
-        <div class="review"></div>
+        <h2>Comments</h2>
+        <div class="comments">
+          <?php
+            while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+              $comment = $row['Comment'];
+              $user    = $row['Uname'];
+              echo '
+                <div class="comment">
+                  <h3>'.$user.'</h3>
+                  <p>'.$comment.'</p>
+                </div>
+              ';
+            }
+          ?>
+        </div>
 
         <div class="writereview">
           <h2>Leave a comment on product</h2>
-          <textarea></textarea>
-          <button type="submit" name="submit">Submit review</button>
+          <textarea id="comment"></textarea>
+          <button id="submitComment" data-id=<?=$productID?> >Submit review</button>
+          <div id="error-message"></div>
         </div>
 
       </section>
@@ -85,6 +108,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="js/min_nav.js"></script>
     <script src="js/rating.js" charset="utf-8"></script>
+    <script src="js/comment.js" charset="utf-8"></script>
 
   </body>
 </html>
