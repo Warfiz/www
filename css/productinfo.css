@@ -50,6 +50,14 @@
   margin: 10px 0;
 }
 
+.info-product .meat-score{
+  float: right;
+}
+
+.info-product .meat-score span{
+  font-weight: 400;
+}
+
 .info-product .rating{
   color: #FFF;
   border-radius: 5px;
@@ -57,7 +65,6 @@
   font-size: 1.2em;
   font-weight: 400;
   background-color: #F06161;
-  float: right;
   margin:0 10px 0 0;
   transition: all .2s ease-in-out;
   cursor: pointer;

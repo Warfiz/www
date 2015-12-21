@@ -16,11 +16,13 @@
     $quantity		   	= $row["Quantity"];
     $meatscore		 	= $row["Meatscore"];
 
+
     echo '<li>
       <div class="product-card">
         <div class="product-img"></div>
         <div class="product-info">
           <h3>'.$meatname.'</h3>
+          <h3>MeatID:'.$productID.'</h3>
           <p>'.$description.'</p>
           <h3>Meatscore: '.$meatscore.'</h3>
           <a class="button-small" href="productinfo.php?pid='.$productID.'">More info</a>
@@ -29,6 +31,7 @@
             Quantity: <input type="number" name="quantity" value="">
             <button type="submit" id="buy">Add to cart</button>
           </form>
+
 
         </div>
       </div>

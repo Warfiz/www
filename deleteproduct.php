@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 
-<!--INSERT SEARCHFIELD-->
-
 <?php
   session_start();
-  if(!isset($_SESSION['authenticated'])) {
+  /*If user in NOT logged in*/
+  if(!isset($_SESSION['authenticated'] ))
+  {
     header( "Location: index.php" );
   };
+  /*If user is NOT an Admin*/
+  if(!isset($_SESSION['Admin']))
+  {
+    header( "Location: products.php" );
+  }
+
   include 'inc/basketCount.php';
-
-
 ?>
 
 <html>
@@ -23,7 +27,8 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" charset="utf-8">
-    <link rel="stylesheet" href="css/products.css" charset="utf-8">
+    <link rel="stylesheet" href="css/addproducts.css" charset="utf-8">
+
 
   </head>
 
@@ -39,8 +44,6 @@
           <?php
           if(isset($_SESSION['Admin'])){
             echo '<li><a href="addproducts.php">Add Products</a></li>';
-            echo '<li><a href="deleteproduct.php">Delete Product</a></li>';
-
           }
           ?>
           <li><a href="php/logout.php">Log out</a></li>
@@ -49,7 +52,6 @@
     </div>
 
     <div class="wrapper">
-
      <a class="menu-button" onclick="expandMenu()"></a>
 
       <header>
@@ -61,21 +63,18 @@
         </div>
       </header>
 
-        <div class="container">
-          <div class="products">
-            <ul class="cards">
 
-              <?php
-                include 'inc/getProducts.php';
-              ?>
+    <div class="add-products">
+      <div class="card-form">
+        <form action="php/deleteproduct.php" method="post">
+          <input type="text"         name="MeatID"      placeholder="Meat ID" required>
 
-            </ul>
-          </div>
-        </div>
 
+          <button type="submit" name="Delete"> Delete </button>
+        </form>
+      </div>
     </div>
 
-
-    <script type="text/javascript" src="js/min_nav.js"></script>
+    </div>
   </body>
 </html>

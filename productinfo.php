@@ -70,9 +70,11 @@
         <img src="/img/placeholder-image.png" alt="">
 
         <div class="info">
+          <div class="meat-score">
+            <span>Your Meatscore</span>
+            <a id="rating" data-id=<?=$productID?> class="rating">+<?=$ratingCount?></a>
+          </div>
           <h3><?=$meatName?></h3>
-          <a id="rating" data-id=<?=$productID?> class="rating">+<?=$ratingCount?></a>
-          <h2>Your Meatscore</h2>
           <p><?=$description?></p>
           <div class="price"><?=$finalPrice?>kr</div>
           <div class="quantity">Quantity: <?=$quantity?></div>
