@@ -22,8 +22,9 @@ $(document).ready(function () {
            console.log(data);
 
            var commentError = data.commentError;
+           var commentID    = data.commentID;
 
-           var comment = "<div class=\"comment\"><h3>"+data.user+"</h3><p>"+data.comment+"</p></div>";
+           var comment = "<div data-id="+commentID+" class=\"comment\"><h3>"+data.user+"</h3><p>"+data.comment+"</p></div>";
 
            if (commentError){
              $('#error-message').html("You already left a comment, see above");

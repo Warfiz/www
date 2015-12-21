@@ -11,6 +11,8 @@
 
   $email = $_SESSION['Email'];
 
+
+
   //Get raitings
   $query = "SELECT Rating FROM reviewtable WHERE producttable_ID = '$productID' AND usertable_Email = '$email'";
   $result = mysqli_query($conn, $query);
@@ -18,7 +20,7 @@
   $ratingCount = $row['Rating'];
 
   //Get comments
-  $query = "SELECT usertable.Uname, reviewtable.Comment
+  $query = "SELECT usertable.Uname, reviewtable.Comment, reviewtable.ID
   FROM usertable
   INNER JOIN reviewtable
   ON usertable.Email=reviewtable.usertable_Email
@@ -88,16 +90,26 @@
         <div class="comments">
           <?php
             while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-              $comment = $row['Comment'];
-              $user    = $row['Uname'];
+              $comment    = $row['Comment'];
+              $user       = $row['Uname'];
+              $commentID  = $row['ID'];
+
               if ($comment != NULL) {
                 echo '
-                  <div class="comment">
+                  <div data-id="'.$commentID.'" class="comment">
                     <h3>'.$user.'</h3>
-                    <p>'.$comment.'</p>
-                  </div>
-                ';
+                    <p>'.$comment.'</p>';
+                if (isset($_SESSION['Admin'])) {
+                  echo'
+                  <a class="button-big" href="php/adminremovecomment.php?cid='.$commentID.'&pid='.$_GET['pid'].'">Remove comment</a>
+                  ';
+                }
+                echo '</div>';
+
+
               }
+
+
             }
           ?>
         </div>

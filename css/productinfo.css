@@ -157,6 +157,20 @@ text-align: left;
   padding: 20px;
 }
 
+.reviews .comments .comment .button-big{
+  float: right;
+  color: #FFF;
+  background-color: #F06161;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.reviews .comments .comment:after{
+  clear: both;
+  content: " ";
+  display: block;
+}
+
 .reviews .comments .comment p{
   font-size: 1.1em;
   font-weight: 300;
