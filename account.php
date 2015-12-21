@@ -70,10 +70,14 @@
               <li> Address: <?=$var_Address?></li>
               <li> City: <?=$var_City?></li>
               <li> Phone numbers: <?=$var_PhoneNumber?></li>
-              <li><a class="button-small"    href="account_update.php">Change Account Info</a></li>
-              <li><a class="button-small"    href="userOrders.php">Your Orders</a></li>
             </ul>
           </div>
+
+          <div class="buttons">
+            <a class="button-big"    href="account_update.php">Change Account Info</a>
+            <a class="button-big"    href="userOrders.php">Your Orders</a>
+          </div>
+
         </section>
 
 

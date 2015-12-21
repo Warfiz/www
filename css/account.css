@@ -3,12 +3,38 @@
 }
 
 .account .info{
-  max-width: 200px;
+  max-width: 302px;
   margin: 0 auto;
+  background: #FFF;
+  padding: 20px;
+  border-radius: 3px;
 }
 
-.cards .product-card {
+.account .info h3{
+  font-size: 1.6em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.account .info ul li{
+  margin-bottom: 10px;
+}
+
+.account .buttons{
+  max-width: inherit;
+  margin: 0 auto;
+  margin-top: 2px;
+}
+
+.account .buttons .button-big{
   background-color: #FFF;
-  padding: 20px;
-  border-radius: 5px;
+  width: 100%;
+  padding: 10px 70px;
+  font-weight: 600;
+  border: 2px solid #FFF;
+  margin-bottom: 3px;
+}
+
+.account .buttons .button-big:hover{
+  background-color: #F06161;
 }
