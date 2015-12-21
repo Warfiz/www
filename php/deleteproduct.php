@@ -5,9 +5,7 @@
 
   $productID         = $_POST["MeatID"];
 
-  $query ="DELETE FROM producttable
-  WHERE ID = '$productID'
-  ";
+  $query ="UPDATE producttable SET Instock = '0' WHERE ID = '$productID'";
 
   $retval = mysqli_query( $conn, $query );
 
