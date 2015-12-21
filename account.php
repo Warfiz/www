@@ -20,6 +20,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" charset="utf-8">
+    <link rel="stylesheet" href="css/account.css" charset="utf-8">
 
   </head>
 
@@ -31,7 +32,7 @@
           <li><a href="account.php">Account</a></li>
           <li><a href="products.php">Products</a></li>
           <li><a href="basket.php">Basket</a><span class="in-basket"><?=$productCounter?></span></li>
-          <li><a href="reviews.php">Reviews</a></li>
+
           <?php
           if(isset($_SESSION['Admin'])){
             echo '<li><a href="addproducts.php">Add Products</a></li>';
@@ -57,29 +58,24 @@
       </header>
 
       <div class="container">
-        <ul class="cards" style="padding: 20px;">
-          <li>
-            <div class="product-card" >
-              <div class="product-info">
-                <h3>Account Information</h3>
-                <div class="navigation-links">
-                  <ul>
-                    <li> Username: <?php echo "$var_Uname";?>   </li>
-                    <li> Email:    <?php echo "$var_Email";?>   </li>
-                    <li> Name: <?php echo "$var_Fname";?> </li>
-                    <li> Surname:  <?php echo "$var_Lname";?> </li>
-                    <li> Address: <?=$var_Address?></li>
-                    <li> City: <?=$var_City?></li>
-                    <li> Phone numbers: <?=$var_PhoneNumber?></li>
-                    <li><a class="button-small"    href="account_update.php">Change Account Info</a></li>
-                    <li><a class="button-small"    href="userOrders.php">Your Orders</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
+
+        <section class="account">
+          <div class="info">
+            <h3>Account Information</h3>
+            <ul>
+              <li> Username: <?php echo "$var_Uname";?>   </li>
+              <li> Email:    <?php echo "$var_Email";?>   </li>
+              <li> Name: <?php echo "$var_Fname";?> </li>
+              <li> Surname:  <?php echo "$var_Lname";?> </li>
+              <li> Address: <?=$var_Address?></li>
+              <li> City: <?=$var_City?></li>
+              <li> Phone numbers: <?=$var_PhoneNumber?></li>
+              <li><a class="button-small"    href="account_update.php">Change Account Info</a></li>
+              <li><a class="button-small"    href="userOrders.php">Your Orders</a></li>
+            </ul>
+          </div>
+        </section>
+
 
     </div>
 

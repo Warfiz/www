@@ -1,0 +1,14 @@
+.account{
+  margin-top: 50px;
+}
+
+.account .info{
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.cards .product-card {
+  background-color: #FFF;
+  padding: 20px;
+  border-radius: 5px;
+}
