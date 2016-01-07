@@ -80,7 +80,7 @@
           <p><?=$description?></p>
           <div class="price"><?=$finalPrice?>kr</div>
           <div class="quantity">Quantity: <?=$quantity?></div>
-          <a href="#" class="button-big">Add to cart</a>
+          <a href=<?="php/addtocart.php?pid=$productID"?> class="button-big">Add to cart</a>
         </div>
 
       </div>
