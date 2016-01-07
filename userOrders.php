@@ -11,9 +11,7 @@
 
   $email = 	$_SESSION['Email'];
 
-  $query= "SELECT  * FROM produktorders WHERE usertable_Email = '$email' group by orderID ";
-
-
+  $query = "SELECT  * FROM produktorders WHERE usertable_Email = '$email' group by orderID ";
   $result = mysqli_query( $conn, $query );
 
 
@@ -43,7 +41,7 @@
           <li><a href="account.php">Account</a></li>
           <li><a href="products.php">Products</a></li>
           <li><a href="basket.php">Basket</a><span class="in-basket"><?=$productCounter?></span></li>
-      
+
           <?php
           if(isset($_SESSION['Admin'])){
             echo '<li><a href="addproducts.php">Add Products</a></li>';
@@ -70,8 +68,12 @@
       <section class="orders">
 
       <?php
+
+        $haveOrders = false;
+
         while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
+          $haveOrders = true;
           $OrderID = $row['OrderID'];
           $sent    = $row['Sent'];
 
@@ -85,11 +87,15 @@
               </div>
               <div class="buttons">
                 <a class="button-big" href="orderdetails.php?od='.$OrderID.'">Details</a>
-                <a class="button-big cancel" href="#">Cancel order</a>
+                <a class="button-big cancel" href="php/cancelOrder.php?oid='.$OrderID.'">Cancel order</a>
               </div>
             </div>
           ';
 
+        }
+
+        if (!$haveOrders) {
+          echo '<h1 style="text-align: center; color: #FFF; margin-bottom: 40px;">You have no orders</h1>';
         }
       ?>
 
