@@ -30,6 +30,7 @@ $(document).ready(function () {
              $('#error-message').html("You already left a comment, see above");
              $('#comment').val(data.comment);
              $('#comment').css("background-color", "#E8E7E7");
+             $('#comment').attr("disabled","disabled");
              $('#deleteComment').show();
            } else {
              $('.comments').prepend(comment);

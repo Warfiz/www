@@ -63,20 +63,21 @@
           <div class="info">
             <h3>Account Information</h3>
             <ul>
-              <li> Username: <?php echo "$var_Uname";?>   </li>
-              <li> Email:    <?php echo "$var_Email";?>   </li>
-              <li> Name: <?php echo "$var_Fname";?> </li>
-              <li> Surname:  <?php echo "$var_Lname";?> </li>
-              <li> Address: <?=$var_Address?></li>
-              <li> City: <?=$var_City?></li>
-              <li> Phone numbers: <?=$var_PhoneNumber?></li>
+              <li> <span>Username:</span> <?php echo "$var_Uname";?>  </li>
+              <li> <span>Email:</span>    <?php echo "$var_Email";?>   </li>
+              <li> <span>Name:</span> <?php echo "$var_Fname";?> </li>
+              <li> <span>Surname:</span>  <?php echo "$var_Lname";?> </li>
+              <li> <span>Address:</span> <?=$var_Address?></li>
+              <li> <span>City:</span> <?=$var_City?></li>
+              <li> <span>Phone Number:</span> <?=$var_PhoneNumber?></li>
             </ul>
+            <div class="buttons">
+              <a class="button-big"    href="account_update.php">Change Account Info</a>
+              <a class="button-big"    href="userOrders.php">Your Orders</a>
+            </div>
           </div>
 
-          <div class="buttons">
-            <a class="button-big"    href="account_update.php">Change Account Info</a>
-            <a class="button-big"    href="userOrders.php">Your Orders</a>
-          </div>
+
 
         </section>
 

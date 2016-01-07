@@ -1,3 +1,26 @@
+/**********
+Search
+************/
+.search{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.search #searchfield{
+  text-align: center;
+  box-shadow: none;
+  background-color: #E8E8E8;
+  border: 2px solid #E8E8E8;
+  transition: all .3s ease;
+  font-size: 1.4em;
+  padding: 10px;
+  width: 300px;
+}
+
+.search #searchfield:focus{
+  background-color: #FFF;
+}
+
 /************
 PRODUCT PAGE
 *************/

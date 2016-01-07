@@ -13,7 +13,12 @@ $(document).ready(function () {
 
         console.log(data);
         var count = data.ratingCount;
-        $('#rating').html('+'+count);
+        if(count){
+          $('#rating').html('+'+count);
+        } else {
+          $('#rating').html('+');
+        }
+
 
        },
        error: function (error) {

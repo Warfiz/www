@@ -63,6 +63,11 @@
       </header>
 
         <div class="container">
+
+          <section class="search">
+            <input id="searchfield" type="text" name="seachField" value="" placeholder="Meatsearch">
+          </section>
+
           <div class="products">
             <ul class="cards">
 
