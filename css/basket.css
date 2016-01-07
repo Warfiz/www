@@ -30,7 +30,7 @@
   float: left;
 }
 
-.item h3{
+.item a{
   font-size: 2em;
   font-weight: 400;
   margin-bottom: 10px;

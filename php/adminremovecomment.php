@@ -1,15 +1,21 @@
 <?php
 
   include '../inc/connect.php';
+  session_start();
 
-  $commentID = $_GET['cid'];
-  $productID = $_GET['pid'];
+  $admin = 	$_SESSION['Admin'];
 
-  $query = "UPDATE reviewtable
-  SET Comment = null
-  WHERE ID = '$commentID'";
-  $result = mysqli_query($conn, $query);
+  if (!isset($admin)) {
+    header("Location: ../filenotfound.php");
+  } else {
+    $commentID = $_GET['cid'];
+    $productID = $_GET['pid'];
 
-  header('Location: /productinfo.php?pid='.$productID);
+    $query = "UPDATE reviewtable
+    SET Comment = null
+    WHERE ID = '$commentID'";
+    $result = mysqli_query($conn, $query);
 
+    header('Location: /productinfo.php?pid='.$productID);
+  }
 ?>

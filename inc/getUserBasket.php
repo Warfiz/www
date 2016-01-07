@@ -38,7 +38,9 @@
     <div class="item">
         <img src="img/placeholder-image.png" alt="" />
         <div class="product-info">
-          <h3>'.$meatname.'</h3>
+          <h3>
+          <a href="productinfo.php?pid='.$productID.'">'.$meatname.'</a>
+          </h3>
           <div class="price">Price: '.$price.'kr</div>
           <div class="quantity">
             Quantity: <input id="'.$productID.'" data-id="'.$productID.'" class="quan" type="text" name="name" value="'.$quantity.'">
